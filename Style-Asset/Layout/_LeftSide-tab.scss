@@ -1,0 +1,117 @@
+.left--side__tab__container {
+     padding: 1rem 1rem 4rem 1rem;
+     .title {
+          @include display-row(center , flex-start) ;
+          position: relative;
+          padding: 1rem 2rem;
+          &::before , &::after{
+               content: "";
+               display: table;
+               clear: both;
+               border: 1rem solid rebeccapurple;
+               position: absolute;
+               left: 0;
+               rotate: 45deg;
+          }
+          &::before {
+               z-index: +1;
+               border-color: $pink--clr;
+          }
+          &::after {
+               border-color: royalblue;
+               margin-left: 1.5rem;
+               border-color: $lightpink--clr;
+          }
+          span {
+               margin-left: 4rem;
+               font-size: 2rem ;
+          }
+     }
+     .left__tab--link {
+          @include display-column(flex-start , space-between) ; 
+          ul {
+               @include display-column(flex-start , space-between) ; 
+               font-size: 2rem;
+               li{
+                    padding: 1rem;
+                    @include display-row(center , flex-start) ;
+                    p {
+                         padding: 1rem 2rem;
+                    }
+               }
+               *::before {
+                    width: 3rem;
+               }
+               .dashboard::before {
+                    content: "\f6f1";
+                    font-family: "Font Awesome 6 Free";
+                    font-weight: 900;
+               }
+               .course::before {
+                    content: "\f290";
+                    font-family: "Font Awesome 6 Free";
+                    font-weight: 900;
+               }
+               .chat::before {
+                    content: "\f27a";
+                    font-family: "Font Awesome 6 Free";
+                    font-weight: 900;
+               }
+               .grade::before {
+                    content: "\f681";
+                    font-family: "Font Awesome 6 Free";
+                    font-weight: 900;
+               }
+               .schedule::before {
+                    content: "\f073";
+                    font-family: "Font Awesome 6 Free";
+                    font-weight: 900;
+               }
+               .setting::before {
+                    content: "\f013";
+                    font-family: "Font Awesome 6 Free";
+                    font-weight: 900;
+               }
+          }
+     }
+     .premium__suggestion {
+          @include display-column-center-center ;
+          border-radius: 2rem;
+          .premium__suggestion--image {
+               height: 17rem;
+               transform: translateY(40%);
+               z-index: +1;
+          }
+          .premium__suggestion--description__container {
+               padding: 1rem 3rem;
+               padding-top: 30%;
+               background-color: $lightpink--clr;
+               @include display-column-center-center ;
+               text-align: center;
+               border-radius: 3rem;
+               .premium__suggestion--title {
+                    h3 {
+                         font-size: 2rem;
+                    }
+               }
+               .premium__suggestion--description {
+                    margin-top: 2rem;
+                    p {
+                         font-size: 1.7rem;
+                    }
+               }
+               .premium__suggestion--button {
+                    width: 100%;
+                    margin-top: 3rem;
+                    button {
+                         width: 100%;
+                         padding: 1rem 0;
+                         background-color: $pink--clr;
+                         border-radius: 2rem;
+                         font-size: 1.8rem;
+                         color: $light--clr;
+                    }
+               }
+          }
+     }
+}
