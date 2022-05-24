@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACAA,AAAA,CAAC,EAAG,CAAC,AAAA,OAAO,CAAC,CAAC,CAAC,QAAQ,CAAC;EACnB,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,QAAQ,EAAE,QAAQ;EAClB,UAAU,EAAE,WAAW;CAC3B;;AACD,AAAA,IAAI,CAAC;EACA,SAAS,EAAE,KAAK;CACpB;;AACD,AAAA,IAAI,CAAC;EACA,SAAS,EAAE,MAAM;CACrB",
+    "sources": [
+        "Style.scss",
+        "Style-Asset/Basement/_reset.scss"
+    ],
+    "names": [],
+    "file": "Style.css"
+}
