@@ -1,24 +1,32 @@
-@include display-row-center-center {
+@mixin display-row-center-center {
      display: flex ; 
      flex-direction: row ;
      align-items: center ; 
      justify-content: center ; 
-} ;
-@include display-row($alignItem , $justifyContent) {
+} 
+@mixin  display-row($alignItem , $justifyContent) {
      display: flex;
      flex-direction: row;
      align-items: $alignItem;
      justify-content: $justifyContent;
 }
-@include display-column-center-center {
+@mixin  display-column-center-center {
      display: flex;
      flex-direction: column;
      align-items: center;
      justify-content: center;
 }
-@include display-column($aligncolumn , $justifycolumn) {
+@mixin  display-column($aligncolumn , $justifycolumn) {
      display: flex;
      flex-direction: column;
      align-items: $aligncolumn;
      justify-content: $justifycolumn;
 }
+@mixin fit-height-width {
+     height: 100%;
+     width: 100%;
+}
+$veryLightPink--clr : #d7d3e4 ; 
+$lightpink--clr : #d9d0fc ;
+$pink--clr : #886dd6 ;
+$light--clr : #fff ;

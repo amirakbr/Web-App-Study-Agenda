@@ -1,0 +1,16 @@
+@import "../Ultility/variable" ;
+body {
+     background-color: $veryLightPink--clr;
+     padding: 4rem 2rem;
+     .main {
+          background-color: $light--clr;
+          position: relative;
+          border-radius: 2rem;
+          .main__container {
+               display: grid;
+               grid-template-columns: 1fr 2fr 1.3fr;
+               position: relative;
+               padding: 2rem;
+          }
+     }
+}
