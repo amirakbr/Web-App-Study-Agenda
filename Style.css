@@ -52,6 +52,101 @@ body .main .main__container {
   padding: 2rem;
 }
 
+.dashboard .dashboard__container .dashboard__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.dashboard .dashboard__container .dashboard__header .dashboard__course--interface {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.dashboard .dashboard__container .new--course .course--new--released {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+}
+
+.dashboard .dashboard__container .new--course .course {
+  padding: .5rem;
+}
+
+.dashboard .dashboard__container .new--course .course .course__image {
+  background-color: aquamarine;
+}
+
+.dashboard .dashboard__container .new--course .course .course__subject {
+  font-size: 1.8rem;
+}
+
+.dashboard .dashboard__container .new--course .course .course__duration {
+  font-size: 1.5rem;
+}
+
+.dashboard .dashboard__container .new--course .course .course__partnership {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.dashboard .dashboard__container .new--course .course .course__partnership .recent__partner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.dashboard .dashboard__container .new--course .course .course__partnership .recent__partner .partner {
+  width: 3.5rem;
+}
+
+.dashboard .dashboard__container .new--course .course .course__partnership .recent__partner .user1, .dashboard .dashboard__container .new--course .course .course__partnership .recent__partner .user2 {
+  margin-left: -1rem;
+}
+
 .left--side__tab__container {
   padding: 1rem 1rem 4rem 1rem;
 }
