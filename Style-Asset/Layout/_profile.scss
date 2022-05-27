@@ -1,0 +1,8 @@
+.profile {
+     .profile__container {
+          .profile__header {
+               width: 100%;
+               @include display-row(center , space-between) ; 
+          }
+     }
+}
