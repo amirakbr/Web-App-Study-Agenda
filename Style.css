@@ -34,11 +34,11 @@ button {
 
 body {
   background-color: #d7d3e4;
-  padding: 4rem 2rem;
+  padding: 4rem 1rem;
 }
 
 body .main {
-  background-color: #fff;
+  background-color: #fbfbfb;
   position: relative;
   border-radius: 2rem;
 }
@@ -46,10 +46,11 @@ body .main {
 body .main .main__container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 2fr 1.3fr;
-      grid-template-columns: 1fr 2fr 1.3fr;
+  -ms-grid-columns: .9fr 2fr 1fr;
+      grid-template-columns: .9fr 2fr 1fr;
+  gap: 2rem;
   position: relative;
-  padding: 2rem;
+  padding: 2rem .5rem;
 }
 
 .dashboard .dashboard__container .dashboard__header {
@@ -89,14 +90,65 @@ body .main .main__container {
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
+  gap: .5rem;
 }
 
 .dashboard .dashboard__container .new--course .course {
-  padding: .5rem;
+  padding: 2rem .5rem;
 }
 
 .dashboard .dashboard__container .new--course .course .course__image {
   background-color: aquamarine;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.dashboard .dashboard__container .new--course .course .course__image img {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  height: 14rem;
+}
+
+.dashboard .dashboard__container .new--course .course .course__image:hover img {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.dashboard .dashboard__container .new--course .course .course__image .absolouteimg1, .dashboard .dashboard__container .new--course .course .course__image .absolouteimg2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  -webkit-filter: drop-shadow(-0.3rem 0rem 0rem rgba(184, 184, 184, 0.512));
+          filter: drop-shadow(-0.3rem 0rem 0rem rgba(184, 184, 184, 0.512));
+  -webkit-transform: scale(0.9) !important;
+          transform: scale(0.9) !important;
+}
+
+.dashboard .dashboard__container .new--course .course .course__image .absolouteimg1 {
+  left: -2%;
+  z-index: +2;
+}
+
+.dashboard .dashboard__container .new--course .course .course__image .absolouteimg2 {
+  left: -4%;
+  z-index: +1;
 }
 
 .dashboard .dashboard__container .new--course .course .course__subject {
@@ -147,8 +199,369 @@ body .main .main__container {
   margin-left: -1rem;
 }
 
+.dashboard .dashboard__container .new--course .course .course__partnership .course__become--partner::before {
+  content: "\f054";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+
+.dashboard .dashboard__container .my__course__list .my__course--header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.dashboard .dashboard__container .my__course__list .my__course__main {
+  width: 100%;
+}
+
+.dashboard .dashboard__container .my__course__list .my__course__main .my__course__table {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 100%;
+  -ms-grid-columns: minmax(30rem, 1.8fr) minmax(8rem, 1fr) minmax(8rem, 1fr) minmax(15rem, 1fr);
+      grid-template-columns: minmax(30rem, 1.8fr) minmax(8rem, 1fr) minmax(8rem, 1fr) minmax(15rem, 1fr);
+  border-collapse: collapse;
+}
+
+.dashboard .dashboard__container .my__course__list .my__course__main .my__course__table tr {
+  display: contents;
+}
+
+.dashboard .dashboard__container .my__course__list .my__course__main .my__course__table tr th, .dashboard .dashboard__container .my__course__list .my__course__main .my__course__table tr td {
+  margin: 0 .5rem;
+}
+
+.dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__course__thead {
+  display: contents;
+  text-align: left;
+}
+
+.dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__course__thead tr th {
+  padding: 1.5rem 0 1.5rem 1rem;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  text-align: left;
+  font-weight: normal;
+  z-index: 100;
+  font-size: 2rem;
+  color: gray;
+}
+
+.dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody {
+  display: contents;
+}
+
+.dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr td {
+  padding: 1.5rem 0 1.5rem 1rem;
+  font-size: 1.5rem;
+}
+
+.dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__name__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__name__container .Course--icon {
+  margin-right: 1rem;
+  padding: 1rem;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 1rem;
+}
+
+.dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__name__container .webdevelopment, .dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__name__container .htmlbasic {
+  background-color: #f3eeff;
+  border: 0.2rem solid #a882ff;
+}
+
+.dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__name__container .basicdevelompent {
+  background-color: #eff8fd;
+  border: 0.2rem solid #7ed2ff;
+}
+
+.dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__name__container .datapython {
+  background-color: #ffedfe;
+  border: 0.2rem solid #df9cdb;
+}
+
+.dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__name__container .javascript--logo {
+  background-color: #fff2e1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 0.2rem solid #ffad61;
+}
+
+.dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__name__container .javascript--logo::before {
+  content: "js";
+  display: table;
+  clear: both;
+  font-size: 3rem;
+  color: #eead71;
+}
+
+.dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__name__container .javascript--logo:hover:before {
+  -webkit-animation: scale__animation .5s ease-in-out infinite;
+          animation: scale__animation .5s ease-in-out infinite;
+}
+
+.dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__name__container .my__courses__name__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1rem;
+}
+
+.dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__name__container .my__courses__name__wrapper .my__courses__name {
+  font-size: 1.9rem;
+}
+
+.dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__name__container .my__courses__name__wrapper .my__courses__name__lessons--number {
+  font-size: 1.5rem;
+  color: gray;
+}
+
+.dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__date, .dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__rate, .dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__level {
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__date::after, .dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__rate::after, .dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__level::after {
+  bottom: 0;
+}
+
+.dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__date, .dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__rate {
+  font-size: 1.7rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__date::after, .dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__rate::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  border-top: solid 0.2em #7ed2ff;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__date:hover:after, .dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__rate:hover:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .webdev:hover, .dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .html:hover {
+  background-color: #f3eeff;
+}
+
+.dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .webdev::after, .dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .html::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  border-top: solid 0.2em #a882ff;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .webdev:hover:after, .dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .html:hover:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .basicdev:hover {
+  background-color: #eff8fd;
+}
+
+.dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .basicdev::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  border-top: solid 0.2em #7ed2ff;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .basicdev:hover:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .python:hover {
+  background-color: #ffedfe;
+}
+
+.dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .python::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  border-top: solid 0.2em #df9cdb;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .python:hover:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .js:hover {
+  background-color: #fff2e1;
+}
+
+.dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .js::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  border-top: solid 0.2em #ffad61;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .js:hover:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+@-webkit-keyframes scale__animation {
+  0% {
+    scale: 1;
+  }
+  25% {
+    scale: 1.1;
+  }
+  50% {
+    scale: 1.2;
+  }
+  75% {
+    scale: 1.1;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+@keyframes scale__animation {
+  0% {
+    scale: 1;
+  }
+  25% {
+    scale: 1.1;
+  }
+  50% {
+    scale: 1.2;
+  }
+  75% {
+    scale: 1.1;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
 .left--side__tab__container {
-  padding: 1rem 1rem 4rem 1rem;
+  padding: 1rem 0rem 4rem 1rem;
 }
 
 .left--side__tab__container .title {
@@ -304,6 +717,8 @@ body .main .main__container {
       -ms-flex-pack: center;
           justify-content: center;
   border-radius: 2rem;
+  position: absolute;
+  bottom: 0;
 }
 
 .left--side__tab__container .premium__suggestion .premium__suggestion--image {

@@ -1,16 +1,17 @@
 @import "../Ultility/variable" ;
 body {
      background-color: $veryLightPink--clr;
-     padding: 4rem 2rem;
+     padding: 4rem 1rem;
      .main {
-          background-color: $light--clr;
+          background-color: #fbfbfb;
           position: relative;
           border-radius: 2rem;
           .main__container {
                display: grid;
-               grid-template-columns: 1fr 2fr 1.3fr;
+               grid-template-columns: .9fr 2fr 1fr;
+               gap: 2rem;
                position: relative;
-               padding: 2rem;
+               padding: 2rem .5rem;
           }
      }
 }

@@ -10,11 +10,41 @@
                .course--new--released {
                     display: grid;
                     grid-template-columns: 1fr 1fr 1fr;
+                    gap: .5rem;
                }
                .course {
-                    padding: .5rem;
+                    padding: 2rem .5rem;
                     .course__image {
                          background-color:aquamarine;
+                         transform: scale(1);
+                         overflow: hidden;
+                         @include display-column-center-center ; 
+                         img {
+                              transform: scale(.9);
+                              transition: all .3s ease-in-out;
+                              height: 14rem;
+                         }
+                         &:hover {
+                              img {
+                                   transform: scale(1);
+                              }
+                         }
+                         .absolouteimg1 , .absolouteimg2 {
+                              position: absolute;    
+                              top: 0;
+                              left: 0;
+                              z-index: -1;
+                              filter: drop-shadow(-.3rem 0rem 0rem rgba(184, 184, 184, 0.512));
+                              transform: scale(.9) !important;
+                         }
+                         .absolouteimg1 {
+                              left: -2%;
+                              z-index: +2;
+                         }
+                         .absolouteimg2 {
+                              left: -4%;
+                              z-index: +1;
+                         }
                     }
                     .course__subject {
                          font-size: 1.8rem;
@@ -33,9 +63,237 @@
                                    margin-left: -1rem;
                               }
                          }
+                         .course__become--partner::before {
+                              content: "\f054";
+                              font-family: "Font Awesome 6 Free";
+                              font-weight: 900;
+                         }
                     }
                     
                }
           }
+          .my__course__list {
+               .my__course--header {
+                    width: 100%;
+                    @include display-row(center , space-between) ; 
+               }
+               .my__course__main {
+                    width: 100%;
+                    .my__course__table {
+                         display: grid;
+                         align-items: center;
+                         min-width: 100%;
+                         grid-template-columns: minmax(30rem , 1.8fr) minmax(8rem , 1fr) minmax(8rem , 1fr) minmax(15rem , 1fr);
+                         border-collapse: collapse;
+                         tr {
+                              display: contents;
+                              th , td {
+                                   margin:  0 .5rem;
+                              }
+                         }
+                         .my__course__thead {
+                              display: contents;
+                              text-align: left;
+                              tr {
+                                   th {
+                                        padding: 1.5rem 0 1.5rem 1rem;
+                                        position: sticky;
+                                        top: 0;
+                                        text-align: left;
+                                        font-weight: normal;
+                                        z-index: 100;
+                                        font-size: 2rem;
+                                        color: gray;
+                                   }
+                              }
+                         }
+                         .my__courses__tbody {
+                              display: contents;
+                              tr {
+                                   td {
+                                        padding: 1.5rem 0 1.5rem 1rem;
+                                        font-size: 1.5rem;
+                                   }
+                                   .my__courses__name__container {
+                                        @include display-row(center , flex-start) ; 
+                                        .Course--icon {
+                                             margin-right: 1rem;
+                                             padding: 1rem ; 
+                                             width: 5rem;
+                                             height: 5rem ;
+                                             border-radius: 1rem;
+                                        }
+                                        .webdevelopment , .htmlbasic{
+                                             background-color: $lightpurple--clr;
+                                             border: .2rem solid $border-lightpurple--clr;
+                                        }
+                                        .basicdevelompent {
+                                             background-color: $lightblue--clr;
+                                             border: .2rem solid $border-lightblue--clr;
+                                        }
+                                        .datapython {
+                                             background-color: $verylightpurple--clr;
+                                             border: .2rem solid $border-verylightpurple--clr;
+                                        }
+                                        .javascript--logo {
+                                             background-color: $lightorang--clr;
+                                             @include display-column-center-center ;
+                                             border: .2rem solid $border-orange--clr;
+                                             &::before {
+                                                  content: "js" ;
+                                                  display: table ; 
+                                                  clear: both ; 
+                                                  font-size: 3rem ; 
+                                                  color: $orange--clr ;
+
+                                             }
+                                             &:hover:before {
+                                                  animation: scale__animation .5s ease-in-out infinite; 
+                                             }
+                                        }
+                                        .my__courses__name__wrapper {
+                                             
+                                             @include display-column(flex-start , space-between) ;
+                                             gap : 1rem ;
+                                             .my__courses__name {
+                                                  font-size: 1.9rem;
+                                             }
+                                             .my__courses__name__lessons--number{
+                                                  font-size: 1.5rem;
+                                                  color: gray;
+                                             }
+                                        }
+                                   }
+                                   .my__courses__date , .my__courses__rate , .my__courses__level {
+                                        transition: all .3s ease-in-out;
+                                        border-radius: 1rem 1rem 0 0;
+                                        &::after {
+                                             bottom: 0;
+                                        }
+                                   }
+                                   .my__courses__date , .my__courses__rate{
+                                        font-size: 1.7rem;
+                                        position: relative;
+                                        display: flex;
+                                        flex-direction: column;
+                                        transition: all .3s ease-in-out;
+                                        border-radius: 1rem 1rem 0 0;
+                                        &::after {
+                                             content: "";
+                                             position: absolute;
+                                             left: 0;
+                                             width: 100%;
+                                             border-top: solid .2em $border-lightblue--clr;
+                                             transform: scaleX(0);
+                                             transform-origin: right;
+                                             transition: transform 0.3s ease-in-out;
+                                        }
+                                        &:hover:after {
+                                             transform: scaleX(1);
+                                             transform-origin: left;
+                                        }
+                                   }
+                                   .webdev , .html {
+                                        &:hover {
+                                             background-color: $lightpurple--clr;
+                                        }
+                                        &::after {
+                                             content: "";
+                                             position: absolute;
+                                             left: 0;
+                                             width: 100%;
+                                             border-top: solid .2em $border-lightpurple--clr;
+                                             transform: scaleX(0);
+                                             transform-origin: right;
+                                             transition: transform 0.3s ease-in-out;
+                                        }
+                                        &:hover:after {
+                                             transform: scaleX(1);
+                                             transform-origin: left;
+                                        }
+                                   }
+                                   .basicdev {
+                                        &:hover {
+                                             background-color: $lightblue--clr;
+                                        }
+                                        &::after {
+                                             content: "";
+                                             position: absolute;
+                                             left: 0;
+                                             width: 100%;
+                                             border-top: solid .2em $border-lightblue--clr;
+                                             transform: scaleX(0);
+                                             transform-origin: right;
+                                             transition: transform 0.3s ease-in-out;
+                                             
+                                        }
+                                        &:hover:after {
+                                             transform: scaleX(1);
+                                             transform-origin: left;
+                                        }
+                                   }
+                                   .python {
+                                        &:hover {
+                                             background-color: $verylightpurple--clr;
+                                        }
+                                        &::after {
+                                             content: "";
+                                             position: absolute;
+                                             left: 0;
+                                             width: 100%;
+                                             border-top: solid .2em $border-verylightpurple--clr;
+                                             transform: scaleX(0);
+                                             transform-origin: right;
+                                             transition: transform 0.3s ease-in-out;
+                                             ;
+                                        }
+                                        &:hover:after {
+                                             transform: scaleX(1);
+                                             transform-origin: left;
+                                        }
+                                   }
+                                   .js {
+                                        &:hover {
+                                             background-color: $lightorang--clr;
+                                        }
+                                        &::after {
+                                             content: "";
+                                             position: absolute;
+                                             left: 0;
+                                             width: 100%;
+                                             border-top: solid .2em $border-orange--clr;
+                                             transform: scaleX(0);
+                                             transform-origin: right;
+                                             transition: transform 0.3s ease-in-out;
+                                             
+                                        }
+                                        &:hover:after {
+                                             transform: scaleX(1);
+                                             transform-origin: left;
+                                        }
+                                   }
+                                   
+                              }
+                         }
+                    }
+               }
+          }
+     }
+}
+@keyframes scale__animation {
+     0%{
+          scale: 1;
+     }
+     25% {
+          scale: 1.1;
+     }
+     50%{
+          scale: 1.2;
+     }
+     75%{
+          scale: 1.1;
+     }
+     100%{
+          scale: 1;
      }
 }
