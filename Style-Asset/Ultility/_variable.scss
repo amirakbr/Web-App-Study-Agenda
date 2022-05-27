@@ -1,3 +1,4 @@
+
 @mixin display-row-center-center {
      display: flex ; 
      flex-direction: row ;
@@ -26,6 +27,7 @@
      height: 100%;
      width: 100%;
 }
+$light--clr : #fff ; 
 $veryLightPink--clr : #d7d3e4 ; 
 $lightpink--clr : #d9d0fc ;
 $lightblue--clr : #eff8fd; 
@@ -39,4 +41,3 @@ $border-lightblue--clr : #7ed2ff;
 $border-lightpurple--clr : #a882ff ;
 $border-verylightpurple--clr : #df9cdb ;
 $pink--clr : #886dd6 ;
-$light--clr : #fff ;

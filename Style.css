@@ -53,6 +53,226 @@ body .main .main__container {
   padding: 2rem .5rem;
 }
 
+.left--side__tab__container {
+  padding: 1rem 0rem 4rem 1rem;
+  /*
+     
+     
+     
+     */
+}
+
+.left--side__tab__container .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  position: relative;
+  padding: 1rem 2rem;
+}
+
+.left--side__tab__container .title::before, .left--side__tab__container .title::after {
+  content: "";
+  display: table;
+  clear: both;
+  border: 1rem solid rebeccapurple;
+  position: absolute;
+  left: 0;
+  rotate: 45deg;
+}
+
+.left--side__tab__container .title::before {
+  z-index: +1;
+  border-color: #886dd6;
+}
+
+.left--side__tab__container .title::after {
+  border-color: royalblue;
+  margin-left: 1.5rem;
+  border-color: #d9d0fc;
+}
+
+.left--side__tab__container .title span {
+  margin-left: 4rem;
+  font-size: 2rem;
+}
+
+.left--side__tab__container .left__tab--link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.left--side__tab__container .left__tab--link ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 2rem;
+}
+
+.left--side__tab__container .left__tab--link ul li {
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.left--side__tab__container .left__tab--link ul li p {
+  padding: 1rem 2rem;
+}
+
+.left--side__tab__container .left__tab--link ul *::before {
+  width: 3rem;
+}
+
+.left--side__tab__container .left__tab--link ul .dashboard::before {
+  content: "\f6f1";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+
+.left--side__tab__container .left__tab--link ul .course::before {
+  content: "\f290";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+
+.left--side__tab__container .left__tab--link ul .chat::before {
+  content: "\f27a";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+
+.left--side__tab__container .left__tab--link ul .grade::before {
+  content: "\f681";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+
+.left--side__tab__container .left__tab--link ul .schedule::before {
+  content: "\f073";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+
+.left--side__tab__container .left__tab--link ul .setting::before {
+  content: "\f013";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+
+.left--side__tab__container .premium__suggestion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 2rem;
+  position: absolute;
+  bottom: 0;
+}
+
+.left--side__tab__container .premium__suggestion .premium__suggestion--image {
+  height: 17rem;
+  -webkit-transform: translateY(40%);
+          transform: translateY(40%);
+  z-index: +1;
+}
+
+.left--side__tab__container .premium__suggestion .premium__suggestion--description__container {
+  padding: 1rem 3rem;
+  padding-top: 30%;
+  background-color: #d9d0fc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  border-radius: 3rem;
+}
+
+.left--side__tab__container .premium__suggestion .premium__suggestion--description__container .premium__suggestion--title h3 {
+  font-size: 2rem;
+}
+
+.left--side__tab__container .premium__suggestion .premium__suggestion--description__container .premium__suggestion--description {
+  margin-top: 2rem;
+}
+
+.left--side__tab__container .premium__suggestion .premium__suggestion--description__container .premium__suggestion--description p {
+  font-size: 1.7rem;
+}
+
+.left--side__tab__container .premium__suggestion .premium__suggestion--description__container .premium__suggestion--button {
+  width: 100%;
+  margin-top: 3rem;
+}
+
+.left--side__tab__container .premium__suggestion .premium__suggestion--description__container .premium__suggestion--button button {
+  width: 100%;
+  padding: 1rem 0;
+  background-color: #886dd6;
+  border-radius: 2rem;
+  font-size: 1.8rem;
+  color: #fff;
+}
+
 .dashboard .dashboard__container .dashboard__header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -67,6 +287,7 @@ body .main .main__container {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  height: 5rem;
 }
 
 .dashboard .dashboard__container .dashboard__header .dashboard__course--interface {
@@ -122,7 +343,7 @@ body .main .main__container {
           transform: scale(0.9);
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
-  height: 14rem;
+  height: 15rem;
 }
 
 .dashboard .dashboard__container .new--course .course .course__image:hover img {
@@ -560,11 +781,8 @@ body .main .main__container {
   }
 }
 
-.left--side__tab__container {
-  padding: 1rem 0rem 4rem 1rem;
-}
-
-.left--side__tab__container .title {
+.profile .profile__container .profile__header {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -575,74 +793,229 @@ body .main .main__container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.profile .profile__container .profile__header .edit__profile {
+  width: 5rem;
+  height: 5rem;
+}
+
+.profile .profile__container .profile__header .edit__profile lord-icon {
+  height: 100%;
+  width: 100%;
+}
+
+.profile .profile__container .profile__detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  position: relative;
-  padding: 1rem 2rem;
 }
 
-.left--side__tab__container .title::before, .left--side__tab__container .title::after {
+.profile .profile__container .profile__detail .user__image {
+  width: 30%;
+}
+
+.profile .profile__container .profile__detail .user__name {
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+.profile .profile__container .profile__detail .user__level {
+  font-size: 1.8rem;
+  margin-top: .5rem;
+}
+
+.profile .profile__container .calendar .calendar__container {
+  padding: 1rem;
+}
+
+.profile .profile__container .calendar .calendar__container .current__day {
+  border-radius: 2rem;
+  overflow: hidden;
+  width: 100%;
+  height: 20rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.profile .profile__container .calendar .calendar__container .current__day .current__day__container {
+  background-color: white;
+  -webkit-backdrop-filter: blur(0.1rem);
+          backdrop-filter: blur(0.1rem);
+  padding: 2rem;
+  border-radius: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: +1;
+}
+
+.profile .profile__container .calendar .calendar__container .current__day .current__day__container p {
+  margin: 0 .5rem;
+  font-size: 1.8rem;
+}
+
+.profile .profile__container .calendar .calendar__container .current__day::after {
+  position: absolute;
   content: "";
   display: table;
   clear: both;
-  border: 1rem solid rebeccapurple;
+  height: 100%;
+  width: 100%;
+  background: 0 0 no-repeat;
+  background-image: url(../../Media-Asset/calenderbackground/summerpumls.jpg);
+  background-position: bottom;
+  background-size: cover;
+  -webkit-filter: blur(0.1rem);
+          filter: blur(0.1rem);
+}
+
+.profile .profile__container .calendar .calendar__container .current__day:hover:after {
+  -webkit-animation: rotate 3s linear infinite;
+          animation: rotate 3s linear infinite;
+}
+
+.profile .profile__container .calendar .calendar__container .calendar__wrapper {
+  width: 100%;
+}
+
+.profile .profile__container .calendar .calendar__container .calendar__wrapper .date__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 1rem;
+  margin-top: 2rem;
+}
+
+.profile .profile__container .calendar .calendar__container .calendar__wrapper .date__container .today__date {
+  font-size: 2rem;
+}
+
+.profile .profile__container .calendar .calendar__container .calendar__wrapper .date__container .date--button__Container button {
+  font-size: 1.8rem;
+  width: 3rem;
+  height: 3rem;
+  padding: .5rem;
+  background-color: rebeccapurple;
+  border-radius: 50%;
+}
+
+.profile .profile__container .calendar .calendar__container .calendar__wrapper .date__container .date--button__Container #btnPrev, .profile .profile__container .calendar .calendar__container .calendar__wrapper .date__container .date--button__Container #btnNext {
+  margin-right: 3rem;
+}
+
+.profile .profile__container .calendar .calendar__container .calendar__wrapper .date__container .date--button__Container #btnPrev::before, .profile .profile__container .calendar .calendar__container .calendar__wrapper .date__container .date--button__Container #btnNext::before {
+  content: "\f053";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+
+.profile .profile__container .calendar .calendar__container .calendar__wrapper .date__container .date--button__Container #btnNext {
+  rotate: 180deg;
+  margin: 0;
+}
+
+.profile .profile__container .calendar .calendar__container .calendar__wrapper table {
+  width: 100%;
+  border-spacing: 0;
+  margin-top: 2rem;
+}
+
+.profile .profile__container .calendar .calendar__container .calendar__wrapper table tbody .days td {
+  text-align: center;
+  padding: .5rem;
+}
+
+.profile .profile__container .calendar .calendar__container .calendar__wrapper table tbody .normal, .profile .profile__container .calendar .calendar__container .calendar__wrapper table tbody .not-current {
+  text-align: center;
+  padding: .5rem;
+}
+
+.profile .profile__container .calendar .calendar__container .calendar__wrapper table tbody td {
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.8rem;
+}
+
+.profile .profile__container .calendar .calendar__container .calendar__wrapper table tbody .today {
+  background-color: #886dd6;
+  color: #fff;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  padding: .5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.8rem;
+  margin: 0 auto;
+}
+
+.profile .profile__container .calendar .calendar__container .calendar__wrapper table tbody .today::after {
   position: absolute;
-  left: 0;
-  rotate: 45deg;
+  content: ".";
+  display: table;
+  clear: both;
+  bottom: -2rem;
+  font-size: 5rem;
+  color: #886dd6;
 }
 
-.left--side__tab__container .title::before {
-  z-index: +1;
-  border-color: #886dd6;
-}
-
-.left--side__tab__container .title::after {
-  border-color: royalblue;
-  margin-left: 1.5rem;
-  border-color: #d9d0fc;
-}
-
-.left--side__tab__container .title span {
-  margin-left: 4rem;
-  font-size: 2rem;
-}
-
-.left--side__tab__container .left__tab--link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.left--side__tab__container .left__tab--link ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  font-size: 2rem;
-}
-
-.left--side__tab__container .left__tab--link ul li {
-  padding: 1rem;
+.varified {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -658,120 +1031,36 @@ body .main .main__container {
           justify-content: flex-start;
 }
 
-.left--side__tab__container .left__tab--link ul li p {
-  padding: 1rem 2rem;
-}
-
-.left--side__tab__container .left__tab--link ul *::before {
-  width: 3rem;
-}
-
-.left--side__tab__container .left__tab--link ul .dashboard::before {
-  content: "\f6f1";
-  font-family: "Font Awesome 6 Free";
-  font-weight: 900;
-}
-
-.left--side__tab__container .left__tab--link ul .course::before {
-  content: "\f290";
-  font-family: "Font Awesome 6 Free";
-  font-weight: 900;
-}
-
-.left--side__tab__container .left__tab--link ul .chat::before {
-  content: "\f27a";
-  font-family: "Font Awesome 6 Free";
-  font-weight: 900;
-}
-
-.left--side__tab__container .left__tab--link ul .grade::before {
-  content: "\f681";
-  font-family: "Font Awesome 6 Free";
-  font-weight: 900;
-}
-
-.left--side__tab__container .left__tab--link ul .schedule::before {
-  content: "\f073";
-  font-family: "Font Awesome 6 Free";
-  font-weight: 900;
-}
-
-.left--side__tab__container .left__tab--link ul .setting::before {
-  content: "\f013";
-  font-family: "Font Awesome 6 Free";
-  font-weight: 900;
-}
-
-.left--side__tab__container .premium__suggestion {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border-radius: 2rem;
+.varified::after {
+  content: url(../../Media-Asset/varified.svg);
+  height: 2.5rem;
+  width: 2.5rem;
+  background-size: 2.5rem 2.5rem;
+  left: calc(100% + 5%);
   position: absolute;
-  bottom: 0;
 }
 
-.left--side__tab__container .premium__suggestion .premium__suggestion--image {
-  height: 17rem;
-  -webkit-transform: translateY(40%);
-          transform: translateY(40%);
-  z-index: +1;
+@-webkit-keyframes rotate {
+  0% {
+    background-position: bottom;
+  }
+  50% {
+    background-position: top;
+  }
+  100% {
+    background-position: bottom;
+  }
 }
 
-.left--side__tab__container .premium__suggestion .premium__suggestion--description__container {
-  padding: 1rem 3rem;
-  padding-top: 30%;
-  background-color: #d9d0fc;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center;
-  border-radius: 3rem;
-}
-
-.left--side__tab__container .premium__suggestion .premium__suggestion--description__container .premium__suggestion--title h3 {
-  font-size: 2rem;
-}
-
-.left--side__tab__container .premium__suggestion .premium__suggestion--description__container .premium__suggestion--description {
-  margin-top: 2rem;
-}
-
-.left--side__tab__container .premium__suggestion .premium__suggestion--description__container .premium__suggestion--description p {
-  font-size: 1.7rem;
-}
-
-.left--side__tab__container .premium__suggestion .premium__suggestion--description__container .premium__suggestion--button {
-  width: 100%;
-  margin-top: 3rem;
-}
-
-.left--side__tab__container .premium__suggestion .premium__suggestion--description__container .premium__suggestion--button button {
-  width: 100%;
-  padding: 1rem 0;
-  background-color: #886dd6;
-  border-radius: 2rem;
-  font-size: 1.8rem;
-  color: #fff;
+@keyframes rotate {
+  0% {
+    background-position: bottom;
+  }
+  50% {
+    background-position: top;
+  }
+  100% {
+    background-position: bottom;
+  }
 }
 /*# sourceMappingURL=Style.css.map */

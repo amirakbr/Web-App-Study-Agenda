@@ -3,6 +3,165 @@
           .profile__header {
                width: 100%;
                @include display-row(center , space-between) ; 
+               .edit__profile {
+                    width: 5rem;
+                    height: 5rem;
+                    lord-icon {
+                         @include fit-height-width;
+                    }
+               }
           }
+          .profile__detail {
+               @include display-column(center , flex-start) ;
+               .user__image {
+                    width: 30%;
+               }
+               .user__name {
+                    font-size: 2rem;
+                    margin-top: 1rem;
+                    
+               }
+
+               .user__level {
+                    font-size: 1.8rem;
+                    margin-top: .5rem;
+               }
+          }
+          .calendar {
+               .calendar__container {
+                    padding: 1rem;
+                    .current__day {
+                         border-radius: 2rem;
+                         overflow: hidden;
+                         .current__day__container {
+                              background-color: white;
+                              backdrop-filter: blur(.1rem);
+                              padding: 2rem;
+                              border-radius: 2rem ; 
+                              @include display-row-center-center ;
+                              z-index: +1;
+                              p{
+                                   margin: 0 .5rem;
+                                   font-size: 1.8rem;
+                              }
+                         }
+                         width: 100%;
+                         height: 20rem;
+                         @include display-row-center-center ;
+                         &::after {
+                              position: absolute;
+                              content: "";
+                              display: table;
+                              clear: both;
+                              @include fit-height-width ; 
+                              background: 0 0 no-repeat;
+                              background-image: url(../../Media-Asset/calenderbackground/summerpumls.jpg);
+                              background-position: bottom;
+                              background-size: cover;
+                              filter: blur(.1rem);
+                         }
+                         &:hover:after {
+                              animation: rotate 3s linear infinite;
+                         }
+                    }
+                    .calendar__wrapper {
+                         width: 100%;
+                         .date__container {
+                              @include display-row(center , space-between) ;
+                              padding: 0 1rem;
+                              margin-top: 2rem;
+                              .today__date {
+                                   font-size: 2rem;
+                              }
+                              .date--button__Container {
+                                   button {
+                                        font-size: 1.8rem;
+                                        width: 3rem;
+                                        height: 3rem;
+                                        padding: .5rem;
+                                        background-color: rebeccapurple;
+                                        border-radius: 50%;
+                                   }
+                                   #btnPrev , #btnNext{
+                                        margin-right: 3rem;
+                                        &::before {
+                                             content: "\f053";
+                                             font-family: "Font Awesome 6 Free";
+                                             font-weight: 900;
+                                        }
+                                   }
+                                   #btnNext {
+                                        rotate: 180deg;
+                                        margin: 0;
+                                   }
+                              }
+                         }
+                         table {
+                              width: 100%;
+                              border-spacing: 0;
+                              margin-top: 2rem;
+                              tbody  {
+                                   .days {
+                                        td {
+                                             text-align: center ;
+                                             padding: .5rem ;
+                                        }
+                                   }
+                                   .normal , .not-current{
+                                        text-align: center ;
+                                        padding: .5rem ;
+                                   }
+                                   td {
+                                        width: 3rem;
+                                        height: 3rem;
+                                        font-size: 1.8rem;
+                                   }
+                                   .today {
+                                        background-color: $pink--clr;
+                                        color: $light--clr;
+                                        border-radius: 50%;
+                                        width: 3rem;
+                                        height: 3rem;
+                                        padding: .5rem ;
+                                        @include display-column-center-center ;
+                                        font-size: 1.8rem;
+                                        margin: 0 auto;
+                                        &::after {
+                                             position: absolute;
+                                             content: ".";
+                                             display: table;
+                                             clear: both;
+                                             bottom: -2rem;
+                                             font-size: 5rem;
+                                             color: $pink--clr;
+                                        }
+                                   }
+                              }
+                         }
+                    }
+               }
+          }
+     }
+}
+.varified {
+     @include display-row(center , flex-start) ;
+     &::after {
+     content: url(../../Media-Asset/varified.svg);
+     height: 2.5rem;
+     width: 2.5rem;
+     background-size: 2.5rem 2.5rem;
+     left: calc(100% + 5%);
+     position: absolute;
+}
+}
+@keyframes rotate {
+     0%{
+          background-position: bottom;
+     }
+     50%{
+          background-position: top;
+     }
+     100% {
+          background-position: bottom;
      }
 }

@@ -2,6 +2,7 @@
      .dashboard__container {
           .dashboard__header {
                @include display-row(center , space-between) ;
+               height: 5rem;
                .dashboard__course--interface {
                     @include display-row(center , space-between) ;
                }
@@ -22,7 +23,7 @@
                          img {
                               transform: scale(.9);
                               transition: all .3s ease-in-out;
-                              height: 14rem;
+                              height: 15rem;
                          }
                          &:hover {
                               img {
@@ -295,5 +296,6 @@
      }
      100%{
           scale: 1;
+
      }
 }
