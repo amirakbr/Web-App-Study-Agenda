@@ -1,5 +1,6 @@
 .profile {
      .profile__container {
+          padding: 1rem;
           .profile__header {
                width: 100%;
                @include display-row(center , space-between) ; 
@@ -29,7 +30,6 @@
           }
           .calendar {
                .calendar__container {
-                    padding: 1rem;
                     .current__day {
                          border-radius: 2rem;
                          overflow: hidden;
@@ -66,10 +66,11 @@
                     }
                     .calendar__wrapper {
                          width: 100%;
+                         margin-top: 2rem;
                          .date__container {
                               @include display-row(center , space-between) ;
                               padding: 0 1rem;
-                              margin-top: 2rem;
+                              
                               .today__date {
                                    font-size: 2rem;
                               }
@@ -112,7 +113,6 @@
                                         padding: .5rem ;
                                    }
                                    td {
-                                        width: 3rem;
                                         height: 3rem;
                                         font-size: 1.8rem;
                                    }
@@ -136,6 +136,63 @@
                                              color: $pink--clr;
                                         }
                                    }
+                              }
+                         }
+                    }
+               }
+          }
+          .my--course__progress {
+               width: 100%;
+               @include display-column(flex-start , center) ; 
+               .my--course__progress__header {
+                    h2 {
+                         font-size: 2rem; 
+                    }
+               }
+               .course__progress__wrapper {
+                    @include display-column(flex-start , center) ; 
+                    width: 100%;
+                    gap: 1rem;
+                    .my--course__progress {
+                         @include display-row(center , space-between) ;
+                         background-color: red;
+                         padding: 1rem 0;
+                         .my--course__progress--cours {
+                              @include display-row(center , flex-start ) ;
+                              gap: 1rem;
+                              .my--course__progress--achivment {
+                                   width: 5rem;
+                                   height: 5rem ; 
+                                   border: .3rem solid royalblue ; 
+                                   border-radius: 50% ; 
+                                   margin-left: 1rem;
+                              }
+                              .my--course__progress--details {
+                                   @include display-column(flex-start , space-between) ; 
+                                   .my--course__progress--name {
+                                        margin-bottom: .75rem;
+                                        p {
+                                             font-size: 1.8rem ; 
+                                        }
+                                   }
+                                   .my--course__progress--duration {
+                                        margin-top: .75rem;
+                                        span {
+                                             font-size: 1.5rem ; 
+                                        }
+                                   }
+                              }
+                         }
+                         .my--course__read--more {
+                              margin-right: 2rem;
+                              &::before {
+                                   content: "\f053";
+                                   font-family: "Font Awesome 6 Free";
+                                   font-weight: 900;
+                                   rotate: 180deg ;
+                                   display: table ; 
+                                   clear: both ;
+                                   
                               }
                          }
                     }

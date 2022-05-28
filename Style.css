@@ -46,11 +46,11 @@ body .main {
 body .main .main__container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: .9fr 2fr 1fr;
-      grid-template-columns: .9fr 2fr 1fr;
-  gap: 2rem;
+  -ms-grid-columns: 1fr 2fr 1fr;
+      grid-template-columns: 1fr 2fr 1fr;
+  gap: 1rem;
   position: relative;
-  padding: 2rem .5rem;
+  padding: 2rem 3rem;
 }
 
 .left--side__tab__container {
@@ -474,9 +474,6 @@ body .main .main__container {
 
 .dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__course__thead tr th {
   padding: 1.5rem 0 1.5rem 1rem;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
   text-align: left;
   font-weight: normal;
   z-index: 100;
@@ -781,6 +778,10 @@ body .main .main__container {
   }
 }
 
+.profile .profile__container {
+  padding: 1rem;
+}
+
 .profile .profile__container .profile__header {
   width: 100%;
   display: -webkit-box;
@@ -836,10 +837,6 @@ body .main .main__container {
 .profile .profile__container .profile__detail .user__level {
   font-size: 1.8rem;
   margin-top: .5rem;
-}
-
-.profile .profile__container .calendar .calendar__container {
-  padding: 1rem;
 }
 
 .profile .profile__container .calendar .calendar__container .current__day {
@@ -911,6 +908,7 @@ body .main .main__container {
 
 .profile .profile__container .calendar .calendar__container .calendar__wrapper {
   width: 100%;
+  margin-top: 2rem;
 }
 
 .profile .profile__container .calendar .calendar__container .calendar__wrapper .date__container {
@@ -928,7 +926,6 @@ body .main .main__container {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0 1rem;
-  margin-top: 2rem;
 }
 
 .profile .profile__container .calendar .calendar__container .calendar__wrapper .date__container .today__date {
@@ -976,7 +973,6 @@ body .main .main__container {
 }
 
 .profile .profile__container .calendar .calendar__container .calendar__wrapper table tbody td {
-  width: 3rem;
   height: 3rem;
   font-size: 1.8rem;
 }
@@ -1013,6 +1009,133 @@ body .main .main__container {
   bottom: -2rem;
   font-size: 5rem;
   color: #886dd6;
+}
+
+.profile .profile__container .my--course__progress {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.profile .profile__container .my--course__progress .my--course__progress__header h2 {
+  font-size: 2rem;
+}
+
+.profile .profile__container .my--course__progress .course__progress__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  gap: 1rem;
+}
+
+.profile .profile__container .my--course__progress .course__progress__wrapper .my--course__progress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: red;
+  padding: 1rem 0;
+}
+
+.profile .profile__container .my--course__progress .course__progress__wrapper .my--course__progress .my--course__progress--cours {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 1rem;
+}
+
+.profile .profile__container .my--course__progress .course__progress__wrapper .my--course__progress .my--course__progress--cours .my--course__progress--achivment {
+  width: 5rem;
+  height: 5rem;
+  border: .3rem solid royalblue;
+  border-radius: 50%;
+  margin-left: 1rem;
+}
+
+.profile .profile__container .my--course__progress .course__progress__wrapper .my--course__progress .my--course__progress--cours .my--course__progress--details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.profile .profile__container .my--course__progress .course__progress__wrapper .my--course__progress .my--course__progress--cours .my--course__progress--details .my--course__progress--name {
+  margin-bottom: .75rem;
+}
+
+.profile .profile__container .my--course__progress .course__progress__wrapper .my--course__progress .my--course__progress--cours .my--course__progress--details .my--course__progress--name p {
+  font-size: 1.8rem;
+}
+
+.profile .profile__container .my--course__progress .course__progress__wrapper .my--course__progress .my--course__progress--cours .my--course__progress--details .my--course__progress--duration {
+  margin-top: .75rem;
+}
+
+.profile .profile__container .my--course__progress .course__progress__wrapper .my--course__progress .my--course__progress--cours .my--course__progress--details .my--course__progress--duration span {
+  font-size: 1.5rem;
+}
+
+.profile .profile__container .my--course__progress .course__progress__wrapper .my--course__progress .my--course__read--more {
+  margin-right: 2rem;
+}
+
+.profile .profile__container .my--course__progress .course__progress__wrapper .my--course__progress .my--course__read--more::before {
+  content: "\f053";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  rotate: 180deg;
+  display: table;
+  clear: both;
 }
 
 .varified {

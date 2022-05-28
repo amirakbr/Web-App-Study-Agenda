@@ -9,10 +9,10 @@ body {
           border-radius: 2rem;
           .main__container {
                display: grid;
-               grid-template-columns: .9fr 2fr 1fr;
-               gap: 2rem;
+               grid-template-columns: 1fr 2fr 1fr;
+               gap: 1rem;
                position: relative;
-               padding: 2rem .5rem;
+               padding: 2rem 3rem;
           }
      }
 }
