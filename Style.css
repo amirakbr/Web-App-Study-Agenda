@@ -1064,7 +1064,7 @@ body .main .main__container {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: red;
+  background-color: rgba(118, 255, 207, 0);
   padding: 1rem 0;
 }
 
@@ -1088,8 +1088,6 @@ body .main .main__container {
 .profile .profile__container .my--course__progress .course__progress__wrapper .my--course__progress .my--course__progress--cours .my--course__progress--achivment {
   width: 5rem;
   height: 5rem;
-  border: .3rem solid royalblue;
-  border-radius: 50%;
   margin-left: 1rem;
 }
 
@@ -1185,5 +1183,30 @@ body .main .main__container {
   100% {
     background-position: bottom;
   }
+}
+
+svg {
+  height: 100%;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  width: 100%;
+}
+
+.progress-bar__background {
+  fill: none;
+  stroke: #e2eff0;
+  stroke-width: 0.2rem;
+}
+
+.progress-bar__progress {
+  fill: none;
+  stroke: #e2eff0;
+  stroke: #78bec7;
+  stroke-dasharray: 100 100;
+  stroke-dashoffset: 100;
+  stroke-linecap: round;
+  stroke-width: 0.2rem;
+  -webkit-transition: stroke-dashoffset 1s ease-in-out;
+  transition: stroke-dashoffset 1s ease-in-out;
 }
 /*# sourceMappingURL=Style.css.map */

@@ -155,7 +155,7 @@
                     gap: 1rem;
                     .my--course__progress {
                          @include display-row(center , space-between) ;
-                         background-color: red;
+                         background-color: rgba(118, 255, 207, 0);
                          padding: 1rem 0;
                          .my--course__progress--cours {
                               @include display-row(center , flex-start ) ;
@@ -163,8 +163,6 @@
                               .my--course__progress--achivment {
                                    width: 5rem;
                                    height: 5rem ; 
-                                   border: .3rem solid royalblue ; 
-                                   border-radius: 50% ; 
                                    margin-left: 1rem;
                               }
                               .my--course__progress--details {
@@ -221,4 +219,29 @@
      100% {
           background-position: bottom;
      }
+}
+$progress-bar-stroke-width: .2rem;
+$progress-bar-size: 100%;
+
+svg {
+  height: $progress-bar-size;
+  transform: rotate(-90deg);
+  width: $progress-bar-size;
+}
+
+.progress-bar__background {
+  fill: none;
+  stroke: #e2eff0;
+  stroke-width: $progress-bar-stroke-width;
+}
+
+.progress-bar__progress {
+  fill: none;
+  stroke: #e2eff0;
+  stroke: #78bec7;
+  stroke-dasharray: 100 100;
+  stroke-dashoffset: 100;
+  stroke-linecap: round;
+  stroke-width: $progress-bar-stroke-width;
+  transition: stroke-dashoffset 1s ease-in-out;
 }

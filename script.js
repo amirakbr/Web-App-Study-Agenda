@@ -1,4 +1,10 @@
+'use strict'
+
+
 var Cal = function(divId) {
+
+
+
 
      //Store div id
      this.divId = divId;
@@ -158,3 +164,65 @@ var Cal = function(divId) {
    function getId(id) {
      return document.getElementById(id);
    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   var percentageComplete = .1;
+   var strokeDashOffsetValue = 100 - (percentageComplete * 100);
+   var progressBar = document.querySelector(".js-progress-bar");
+   progressBar.style.strokeDashoffset = strokeDashOffsetValue;
+   
