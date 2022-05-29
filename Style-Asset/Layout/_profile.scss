@@ -164,6 +164,12 @@
                                    width: 5rem;
                                    height: 5rem ; 
                                    margin-left: 1rem;
+                                   .my--course__progress--achivment__percentage {
+                                        position: absolute ; 
+                                        top: 50% ;
+                                        left: 50% ; 
+                                        transform: translate(-50% , -50% ) ; 
+                                   }
                               }
                               .my--course__progress--details {
                                    @include display-column(flex-start , space-between) ; 
