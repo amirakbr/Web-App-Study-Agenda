@@ -166,6 +166,24 @@ var Cal = function(divId) {
    }
 
 
+//Get All progressBar svg
+let progressBar = document.querySelectorAll(".progress-bar__progress") ; 
+//Get Each progressBar svg
+progressBar.forEach((item) => {
+  //Get progressBar achivment innerhtml
+  let achvmentPercentage = item.parentElement.parentElement.children[1].innerHTML ;
+  //Get progressBar achivment innerhtml convert to array to do some changes
+  //Get progressBar achivment array remove all spaces
+  let percentageArray = [...achvmentPercentage].filter(n => String(n).trim()); 
+  //Get progressBar achivment array remove "%" sign
+  percentageArray.pop() ; 
+  //Get progressBar achivment array convert to string
+  percentageArray.toString() ; 
+  let percentageString = percentageArray.join("") ; 
+  console.log(percentageString);
+  //push achivment iinnerhtml to strokoffset style for circle in svg
+  item.style.strokeDashoffset = 100-(percentageString);
+})
 
 
 
@@ -188,41 +206,4 @@ var Cal = function(divId) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   var percentageComplete = .1;
-   var strokeDashOffsetValue = 100 - (percentageComplete * 100);
-   var progressBar = document.querySelector(".js-progress-bar");
-   progressBar.style.strokeDashoffset = strokeDashOffsetValue;
    
