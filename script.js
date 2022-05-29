@@ -189,6 +189,17 @@ progressBar.forEach((item) => {
 
 
 
+// active headerlink 
+let headerLink = document.querySelectorAll(".header__link") ;
+headerLink.forEach((item) => {
+  item.addEventListener("click" , (e) => {
+    for (let i = 0; i < headerLink.length ; i++) {
+      headerLink[i].classList.remove("activate__header") ;
+    }
+    item.classList.add("activate__header") ; 
+    console.log(headerLink[1]);
+  })
+})
 
 
 

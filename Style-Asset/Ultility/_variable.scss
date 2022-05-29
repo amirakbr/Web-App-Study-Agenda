@@ -29,7 +29,8 @@
 }
 $light--clr : #fff ; 
 $veryLightPink--clr : #d7d3e4 ; 
-$lightpink--clr : #d9d0fc ;
+$smoth--lightpink--clr : #f5e8ff ;
+$lightpink--clr : #ecd4ff ;
 $lightblue--clr : #eff8fd; 
 $lightpurple--clr : #f3eeff ;
 $verylightpurple--clr : #ffedfe ;
@@ -41,3 +42,18 @@ $border-lightblue--clr : #7ed2ff;
 $border-lightpurple--clr : #a882ff ;
 $border-verylightpurple--clr : #df9cdb ;
 $pink--clr : #886dd6 ;
+$light--gray--clr : #6c6c6c ; 
+$progress-bar-stroke-width: .2rem;
+$progress-bar-size: 100%;
+
+// font size variable
+$small--sub-font : 1.5rem ; 
+$small--font : 1.75rem ; 
+$small--sup-font : 2rem ; 
+$normall--sub-font : 2.25rem ; 
+$normall--font : 2.5rem ; 
+$normall--sup-font : 2.75rem ; 
+$normall--sub-large : 4rem ; 
+$normall--large : 4.5rem ; 
+$normall--sup-large : 5rem ; 
+$normall--very-large : 6rem ; 

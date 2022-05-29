@@ -9,8 +9,8 @@ body {
           border-radius: 2rem;
           .main__container {
                display: grid;
-               grid-template-columns: 1fr 2fr 1fr;
-               gap: 1rem;
+               grid-template-columns: minmax(25rem , .5fr) 2fr 1fr ;
+               gap: 3rem;
                position: relative;
                padding: 2rem 3rem;
           }

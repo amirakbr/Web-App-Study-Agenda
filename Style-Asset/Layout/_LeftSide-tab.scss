@@ -25,17 +25,32 @@
           }
           span {
                margin-left: 4rem;
-               font-size: 2rem ;
+               font-size: $normall--sup-font ;
+               font-weight: 600 ; 
           }
      }
      .left__tab--link {
           @include display-column(flex-start , space-between) ; 
+          margin-top: 3rem;
+          z-index: +10;
           ul {
                @include display-column(flex-start , space-between) ; 
                font-size: 2rem;
+               gap: 2rem;
                li{
-                    padding: 1rem;
+                    padding: 1rem 2rem;
                     @include display-row(center , flex-start) ;
+                    border-radius: 1rem;
+                    width: 100%;
+                    cursor: pointer;
+                    color: $light--gray--clr;
+                    font-size: $small--sup-font;
+                    border: .1rem solid transparent;
+                    transition: all .3s ease-in-out;
+                    &:hover {
+                         background-color: $smoth--lightpink--clr;
+                         border: .1rem solid $lightpink--clr;
+                    }
                     p {
                          padding: 1rem 2rem;
                     }
@@ -80,6 +95,12 @@
           border-radius: 2rem;
           position: absolute;
           bottom: 0;
+          &:hover {
+               .premium__suggestion--image {
+                    animation: vibrateimage 2s linear infinite;
+                    transform: rotate(0deg) translateY(35%);
+               }     
+          }
           .premium__suggestion--image {
                height: 17rem;
                transform: translateY(40%);
@@ -94,13 +115,13 @@
                border-radius: 3rem;
                .premium__suggestion--title {
                     h3 {
-                         font-size: 2rem;
+                         font-size: $normall--sub-font ; 
                     }
                }
                .premium__suggestion--description {
                     margin-top: 2rem;
                     p {
-                         font-size: 1.7rem;
+                         font-size: $small--font ;
                     }
                }
                .premium__suggestion--button {
@@ -111,7 +132,7 @@
                          padding: 1rem 0;
                          background-color: $pink--clr;
                          border-radius: 2rem;
-                         font-size: 1.8rem;
+                         font-size: $small--font;
                          color: $light--clr;
                     }
                }
@@ -122,4 +143,30 @@
      
      
      */
+}
+.activate__header {
+     background-color: $lightpink--clr;    
+     color: black !important;
+     font-size: $normall--sub-font !important;
+     border: .1rem solid $smoth--lightpink--clr !important; 
+     &:hover {
+          background-color: $lightpink--clr !important;    
+     }
+}
+@keyframes vibrateimage {
+     0%{
+          transform: rotate(0deg) translateY(35%);
+     }
+     25% {
+          transform: rotate(3deg) translateY(30%);
+     }
+     50%{
+          transform: rotate(0deg) translateY(35%);
+     }
+     75%{
+          transform: rotate(-3deg) translateY(30%);
+     }
+     100%{
+          transform: rotate(0deg) translateY(35%);
+     }
 }
