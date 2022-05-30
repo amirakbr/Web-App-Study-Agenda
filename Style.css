@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *, *::after, *::before {
   margin: 0%;
   padding: 0%;
@@ -182,37 +183,43 @@ body .main .main__container {
 }
 
 .left--side__tab__container .left__tab--link ul .dashboard::before {
-  content: "\f6f1";
+  content: "";
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
 }
 
 .left--side__tab__container .left__tab--link ul .course::before {
-  content: "\f290";
+  content: "";
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
 }
 
 .left--side__tab__container .left__tab--link ul .chat::before {
-  content: "\f27a";
+  content: "";
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
 }
 
 .left--side__tab__container .left__tab--link ul .grade::before {
-  content: "\f681";
+  content: "";
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
 }
 
 .left--side__tab__container .left__tab--link ul .schedule::before {
-  content: "\f073";
+  content: "";
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
 }
 
 .left--side__tab__container .left__tab--link ul .setting::before {
-  content: "\f013";
+  content: "";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+
+.left--side__tab__container .left__tab--link ul .help::before {
+  content: "";
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
 }
@@ -232,8 +239,6 @@ body .main .main__container {
       -ms-flex-pack: center;
           justify-content: center;
   border-radius: 2rem;
-  position: absolute;
-  bottom: 0;
 }
 
 .left--side__tab__container .premium__suggestion:hover .premium__suggestion--image {

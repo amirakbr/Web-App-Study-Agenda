@@ -59,42 +59,31 @@
                     width: 3rem;
                }
                .dashboard::before {
-                    content: "\f6f1";
-                    font-family: "Font Awesome 6 Free";
-                    font-weight: 900;
+                    @include fontasome("\f6f1") ;
                }
                .course::before {
-                    content: "\f290";
-                    font-family: "Font Awesome 6 Free";
-                    font-weight: 900;
+                    @include fontasome("\f290") ; 
                }
                .chat::before {
-                    content: "\f27a";
-                    font-family: "Font Awesome 6 Free";
-                    font-weight: 900;
+                    @include fontasome("\f27a") ;
                }
                .grade::before {
-                    content: "\f681";
-                    font-family: "Font Awesome 6 Free";
-                    font-weight: 900;
+                    @include fontasome("\f681") ;
                }
                .schedule::before {
-                    content: "\f073";
-                    font-family: "Font Awesome 6 Free";
-                    font-weight: 900;
+                    @include fontasome("\f073") ; 
                }
                .setting::before {
-                    content: "\f013";
-                    font-family: "Font Awesome 6 Free";
-                    font-weight: 900;
+                    @include fontasome("\f013")  ;
+               }
+               .help::before {
+                    @include fontasome("\f05a") ; 
                }
           }
      }
      .premium__suggestion {
           @include display-column-center-center ;
           border-radius: 2rem;
-          position: absolute;
-          bottom: 0;
           &:hover {
                .premium__suggestion--image {
                     animation: vibrateimage 2s linear infinite;

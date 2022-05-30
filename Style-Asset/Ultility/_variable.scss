@@ -27,6 +27,12 @@
      height: 100%;
      width: 100%;
 }
+@mixin fontasome($icon) {
+     content: $icon;
+     font-family: "Font Awesome 6 Free";
+     font-weight: 900;
+     
+}
 $light--clr : #fff ; 
 $veryLightPink--clr : #d7d3e4 ; 
 $smoth--lightpink--clr : #f5e8ff ;
