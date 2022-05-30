@@ -3,83 +3,192 @@
           .dashboard__header {
                @include display-row(center , space-between) ;
                height: 5rem;
+               margin-top: 3rem;
+               padding: 1.5rem 1rem;
+               .dashboard__title {
+                    font-size: $small--font ;
+               }
                .dashboard__course--interface {
                     @include display-row(center , space-between) ;
+                    gap: 1rem;
+                    .dashboard__search--box {
+                         @include display-row(center , space-between) ; 
+                         background-color: $light--clr;
+                         border-radius: 1rem;
+                         overflow: hidden;
+                         @include placeholder(#909090) ; 
+                         input {
+                              border: none;
+                              outline: none;
+                              padding: 1.5rem 1rem;
+                              width: 100%;
+                              font-size: $small--font;
+                         }
+                         &::before {
+                              @include fontasome("\f002") ; 
+                              padding: 1.5rem 1rem;
+                              font-size: $small--sup-font;
+                              color: #909090;
+                              font-weight: 600;
+                         }
+                    }
+                    .dashboard__notification--alert {
+                         padding: 1.5rem;
+                         border-radius: 1rem;
+                         background-color: $light--clr;
+                         color: $dark--gray--clr;
+                         &::before {
+                              @include fontasome("\f0f3") ; 
+                              font-size: $normall--sub-font;
+                         }
+                    }
                }
           }
           .new--course {
+               .course__header {
+                    padding: 1.5rem 1rem;
+                    font-size: $small--sup-font;
+               }
                .course--new--released {
                     display: grid;
-                    grid-template-columns: 1fr 1fr 1fr;
-                    gap: .5rem;
-               }
-               .course {
-                    padding: 2rem .5rem;
-                    .course__image {
-                         background-color:aquamarine;
-                         transform: scale(1);
-                         overflow: hidden;
-                         @include display-column-center-center ; 
-                         img {
-                              transform: scale(.9);
-                              transition: all .3s ease-in-out;
-                              height: 15rem;
-                         }
-                         &:hover {
+                    grid-template-columns: repeat(auto-fit ,  minmax(19rem , 1fr));
+                    gap: 1rem;
+                    .course {
+                         padding: 2rem 1rem;
+                         border-radius: 1rem;
+                         .course__image {
+                              background-color:aquamarine;
+                              transform: scale(1);
+                              overflow: hidden;
+                              @include display-column-center-center ; 
+                              border-radius: 1rem;
                               img {
-                                   transform: scale(1);
+                                   transform: scale(.9);
+                                   transition: all .3s ease-in-out;
+                                   height: 15rem;
+                              }
+                              &:hover {
+                                   img {
+                                        transform: scale(1);
+                                   }
+                              }
+                              .absolouteimg1 , .absolouteimg2 {
+                                   position: absolute;    
+                                   top: 0;
+                                   left: 0;
+                                   z-index: -1;
+                                   filter: drop-shadow(-.3rem 0rem 0rem rgba(184, 184, 184, 0.512));
+                                   transform: scale(.9) !important;
+                              }
+                              .absolouteimg1 {
+                                   left: -2%;
+                                   z-index: +2;
+                              }
+                              .absolouteimg2 {
+                                   left: -4%;
+                                   z-index: +1;
                               }
                          }
-                         .absolouteimg1 , .absolouteimg2 {
-                              position: absolute;    
-                              top: 0;
-                              left: 0;
-                              z-index: -1;
-                              filter: drop-shadow(-.3rem 0rem 0rem rgba(184, 184, 184, 0.512));
-                              transform: scale(.9) !important;
+                         .course__subject {
+                              font-size: $small--sup-font;
+                              padding: .5rem 0 ;
+                              margin-top: 1rem;
+                              width: 100%;
                          }
-                         .absolouteimg1 {
-                              left: -2%;
-                              z-index: +2;
+                         .course__duration {
+                              font-size: $small--font ; 
+                              padding: .5rem 0 ;
+                              margin-top: .1rem ;
+                              width: 100%;
                          }
-                         .absolouteimg2 {
-                              left: -4%;
-                              z-index: +1;
-                         }
-                    }
-                    .course__subject {
-                         font-size: 1.8rem;
-                    }
-                    .course__duration {
-                         font-size: 1.5rem;
-                    }
-                    .course__partnership {
-                         @include display-row(center , space-between) ; 
-                         .recent__partner {
-                              @include display-row(center , flex-start) ; 
-                              .partner {
-                                   width: 3.5rem;
+                         .course__partnership {
+                              @include display-row(center , space-between) ; 
+                              margin-top: 4rem;
+                              .recent__partner {
+                                   @include display-row(center , flex-start) ; 
+                                   .partner {
+                                        width: 3.5rem;
+                                        transition: all .1s ease-in-out;
+                                        z-index: +1;
+                                        scale: 1;
+                                        &:hover {
+                                             z-index: +2;
+                                             scale: 1.09;
+                                             cursor: pointer;
+                                        }
+                                   }
+                                   .user1 , .user2{
+                                        margin-left: -1rem;
+                                   }
                               }
-                              .user1 , .user2{
-                                   margin-left: -1rem;
+                              .course__become--partner {
+                                   padding: .5rem 1rem;
+                                   font-size: $small--sup-font;
+                                   border-radius: 1rem;
+                                   transform: translate(0 , 0);
+                                   transition: all .3s ease-in-out;
+                                   &:hover {
+                                        transform: translate(4% , 0);
+                                   }
+                                   &::before {
+                                        @include fontasome("\f054") ; 
+                                        color: $light--clr;
+                                        transform: translate(0 , 0);
+                                   }
                               }
                          }
-                         .course__become--partner::before {
-                              content: "\f054";
-                              font-family: "Font Awesome 6 Free";
-                              font-weight: 900;
+                         
+                    }
+
+                    .geography {
+                         background-color: $light-orange-clr;
+                         .course__image , .course__become--partner {
+                              background-color: $orange-clr;
+                              border: .2rem solid $border-orange-clr;
+                              img {
+                                   filter: drop-shadow(.5rem .5rem .1rem $border-orange-clr);
+                              }
                          }
                     }
-                    
+                    .js {
+                         background-color : $light-purple-clr ; 
+                         .course__image , .course__become--partner {
+                              background-color: $purple-clr;
+                              border: .2rem solid $border-purple-clr;
+                              img {
+                                   filter: drop-shadow(.5rem .5rem .1rem $border-purple-clr);
+                              }
+                         }    
+                    }
+                    .photography {
+                         background-color : $light-blue-clr ; 
+                         .course__image , .course__become--partner {
+                              background-color: $blue-clr;
+                              border: .2rem solid $border-blue-clr;
+                              img {
+                                   filter: drop-shadow(.5rem .5rem .1rem $border-blue-clr);
+                              }
+                         }    
+                    }
                }
           }
           .my__course__list {
                .my__course--header {
-                    width: 100%;
                     @include display-row(center , space-between) ; 
+                    padding: 1.5rem 1rem;
+                    margin-top: 2rem;
+                    .my__course--titel {
+                         font-size: $small--sup-font;
+                    }
+                    .my__course--viewFullList {
+                         font-size: $small--font;
+                         color: $purple-clr;
+                         font-weight: 600;
+                    }
                }
                .my__course__main {
                     width: 100%;
+                    margin-top: 2rem;
                     .my__course__table {
                          display: grid;
                          align-items: center;
@@ -97,12 +206,12 @@
                               text-align: left;
                               tr {
                                    th {
-                                        padding: 1.5rem 0 1.5rem 1rem;
+                                        padding: 1.5rem 0rem 1.5rem .5rem;
                                         text-align: left;
                                         font-weight: normal;
                                         z-index: 100;
-                                        font-size: 2rem;
-                                        color: gray;
+                                        font-size: $small--sup-font;
+                                        color: $dark--gray--clr;
                                    }
                               }
                          }
@@ -110,8 +219,10 @@
                               display: contents;
                               tr {
                                    td {
-                                        padding: 1.5rem 0 1.5rem 1rem;
-                                        font-size: 1.5rem;
+                                        padding: 1.5rem 0rem 1.5rem .5rem;
+                                        &:hover {
+                                             cursor: pointer;
+                                        }
                                    }
                                    .my__courses__name__container {
                                         @include display-row(center , flex-start) ; 
@@ -151,32 +262,36 @@
                                              }
                                         }
                                         .my__courses__name__wrapper {
-                                             
                                              @include display-column(flex-start , space-between) ;
                                              gap : 1rem ;
                                              .my__courses__name {
-                                                  font-size: 1.9rem;
+                                                  font-size: $small--sup-font;
                                              }
                                              .my__courses__name__lessons--number{
-                                                  font-size: 1.5rem;
-                                                  color: gray;
+                                                  font-size: $small--sub-font;
+                                                  color: $dark--gray--clr;
                                              }
                                         }
                                    }
                                    .my__courses__date , .my__courses__rate , .my__courses__level {
                                         transition: all .3s ease-in-out;
                                         border-radius: 1rem 1rem 0 0;
+                                        font-size: $small--sub-font;
                                         &::after {
                                              bottom: 0;
                                         }
                                    }
-                                   .my__courses__date , .my__courses__rate{
-                                        font-size: 1.7rem;
+                                   .my__courses__date , .my__courses__rate , .my__courses__level{
                                         position: relative;
                                         display: flex;
                                         flex-direction: column;
-                                        transition: all .3s ease-in-out;
+                                        transition: all .1s ease-in-out;
                                         border-radius: 1rem 1rem 0 0;
+                                        scale: 1;
+                                        &:hover {
+                                             scale: 1.1;
+                                             cursor: pointer;
+                                        }
                                         &::after {
                                              content: "";
                                              position: absolute;

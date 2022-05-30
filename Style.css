@@ -374,6 +374,12 @@ body .main .main__container {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 5rem;
+  margin-top: 3rem;
+  padding: 1.5rem 1rem;
+}
+
+.dashboard .dashboard__container .dashboard__header .dashboard__title {
+  font-size: 1.75rem;
 }
 
 .dashboard .dashboard__container .dashboard__header .dashboard__course--interface {
@@ -390,21 +396,97 @@ body .main .main__container {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  gap: 1rem;
+}
+
+.dashboard .dashboard__container .dashboard__header .dashboard__course--interface .dashboard__search--box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.dashboard .dashboard__container .dashboard__header .dashboard__course--interface .dashboard__search--box ::-webkit-input-placeholder {
+  color: #909090;
+}
+
+.dashboard .dashboard__container .dashboard__header .dashboard__course--interface .dashboard__search--box :-moz-placeholder {
+  color: #909090;
+  opacity: 1;
+}
+
+.dashboard .dashboard__container .dashboard__header .dashboard__course--interface .dashboard__search--box ::-moz-placeholder {
+  color: #909090;
+  opacity: 1;
+}
+
+.dashboard .dashboard__container .dashboard__header .dashboard__course--interface .dashboard__search--box :-ms-input-placeholder {
+  color: #909090;
+}
+
+.dashboard .dashboard__container .dashboard__header .dashboard__course--interface .dashboard__search--box input {
+  border: none;
+  outline: none;
+  padding: 1.5rem 1rem;
+  width: 100%;
+  font-size: 1.75rem;
+}
+
+.dashboard .dashboard__container .dashboard__header .dashboard__course--interface .dashboard__search--box::before {
+  content: "";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  padding: 1.5rem 1rem;
+  font-size: 2rem;
+  color: #909090;
+  font-weight: 600;
+}
+
+.dashboard .dashboard__container .dashboard__header .dashboard__course--interface .dashboard__notification--alert {
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background-color: #fff;
+  color: #5e5e60;
+}
+
+.dashboard .dashboard__container .dashboard__header .dashboard__course--interface .dashboard__notification--alert::before {
+  content: "";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 2.25rem;
+}
+
+.dashboard .dashboard__container .new--course .course__header {
+  padding: 1.5rem 1rem;
+  font-size: 2rem;
 }
 
 .dashboard .dashboard__container .new--course .course--new--released {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  gap: .5rem;
+  -ms-grid-columns: (minmax(19rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+  gap: 1rem;
 }
 
-.dashboard .dashboard__container .new--course .course {
-  padding: 2rem .5rem;
+.dashboard .dashboard__container .new--course .course--new--released .course {
+  padding: 2rem 1rem;
+  border-radius: 1rem;
 }
 
-.dashboard .dashboard__container .new--course .course .course__image {
+.dashboard .dashboard__container .new--course .course--new--released .course .course__image {
   background-color: aquamarine;
   -webkit-transform: scale(1);
           transform: scale(1);
@@ -422,9 +504,10 @@ body .main .main__container {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  border-radius: 1rem;
 }
 
-.dashboard .dashboard__container .new--course .course .course__image img {
+.dashboard .dashboard__container .new--course .course--new--released .course .course__image img {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
   -webkit-transition: all .3s ease-in-out;
@@ -432,12 +515,12 @@ body .main .main__container {
   height: 15rem;
 }
 
-.dashboard .dashboard__container .new--course .course .course__image:hover img {
+.dashboard .dashboard__container .new--course .course--new--released .course .course__image:hover img {
   -webkit-transform: scale(1);
           transform: scale(1);
 }
 
-.dashboard .dashboard__container .new--course .course .course__image .absolouteimg1, .dashboard .dashboard__container .new--course .course .course__image .absolouteimg2 {
+.dashboard .dashboard__container .new--course .course--new--released .course .course__image .absolouteimg1, .dashboard .dashboard__container .new--course .course--new--released .course .course__image .absolouteimg2 {
   position: absolute;
   top: 0;
   left: 0;
@@ -448,25 +531,31 @@ body .main .main__container {
           transform: scale(0.9) !important;
 }
 
-.dashboard .dashboard__container .new--course .course .course__image .absolouteimg1 {
+.dashboard .dashboard__container .new--course .course--new--released .course .course__image .absolouteimg1 {
   left: -2%;
   z-index: +2;
 }
 
-.dashboard .dashboard__container .new--course .course .course__image .absolouteimg2 {
+.dashboard .dashboard__container .new--course .course--new--released .course .course__image .absolouteimg2 {
   left: -4%;
   z-index: +1;
 }
 
-.dashboard .dashboard__container .new--course .course .course__subject {
-  font-size: 1.8rem;
+.dashboard .dashboard__container .new--course .course--new--released .course .course__subject {
+  font-size: 2rem;
+  padding: .5rem 0;
+  margin-top: 1rem;
+  width: 100%;
 }
 
-.dashboard .dashboard__container .new--course .course .course__duration {
-  font-size: 1.5rem;
+.dashboard .dashboard__container .new--course .course--new--released .course .course__duration {
+  font-size: 1.75rem;
+  padding: .5rem 0;
+  margin-top: .1rem;
+  width: 100%;
 }
 
-.dashboard .dashboard__container .new--course .course .course__partnership {
+.dashboard .dashboard__container .new--course .course--new--released .course .course__partnership {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -480,9 +569,10 @@ body .main .main__container {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-top: 4rem;
 }
 
-.dashboard .dashboard__container .new--course .course .course__partnership .recent__partner {
+.dashboard .dashboard__container .new--course .course--new--released .course .course__partnership .recent__partner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -498,22 +588,91 @@ body .main .main__container {
           justify-content: flex-start;
 }
 
-.dashboard .dashboard__container .new--course .course .course__partnership .recent__partner .partner {
+.dashboard .dashboard__container .new--course .course--new--released .course .course__partnership .recent__partner .partner {
   width: 3.5rem;
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+  z-index: +1;
+  scale: 1;
 }
 
-.dashboard .dashboard__container .new--course .course .course__partnership .recent__partner .user1, .dashboard .dashboard__container .new--course .course .course__partnership .recent__partner .user2 {
+.dashboard .dashboard__container .new--course .course--new--released .course .course__partnership .recent__partner .partner:hover {
+  z-index: +2;
+  scale: 1.09;
+  cursor: pointer;
+}
+
+.dashboard .dashboard__container .new--course .course--new--released .course .course__partnership .recent__partner .user1, .dashboard .dashboard__container .new--course .course--new--released .course .course__partnership .recent__partner .user2 {
   margin-left: -1rem;
 }
 
-.dashboard .dashboard__container .new--course .course .course__partnership .course__become--partner::before {
-  content: "\f054";
+.dashboard .dashboard__container .new--course .course--new--released .course .course__partnership .course__become--partner {
+  padding: .5rem 1rem;
+  font-size: 2rem;
+  border-radius: 1rem;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.dashboard .dashboard__container .new--course .course--new--released .course .course__partnership .course__become--partner:hover {
+  -webkit-transform: translate(4%, 0);
+          transform: translate(4%, 0);
+}
+
+.dashboard .dashboard__container .new--course .course--new--released .course .course__partnership .course__become--partner::before {
+  content: "";
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
+  color: #fff;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+.dashboard .dashboard__container .new--course .course--new--released .geography {
+  background-color: #fdf0e0;
+}
+
+.dashboard .dashboard__container .new--course .course--new--released .geography .course__image, .dashboard .dashboard__container .new--course .course--new--released .geography .course__become--partner {
+  background-color: #fbac5f;
+  border: 0.2rem solid #f7c28e;
+}
+
+.dashboard .dashboard__container .new--course .course--new--released .geography .course__image img, .dashboard .dashboard__container .new--course .course--new--released .geography .course__become--partner img {
+  -webkit-filter: drop-shadow(0.5rem 0.5rem 0.1rem #f7c28e);
+          filter: drop-shadow(0.5rem 0.5rem 0.1rem #f7c28e);
+}
+
+.dashboard .dashboard__container .new--course .course--new--released .js {
+  background-color: #e9e3fd;
+}
+
+.dashboard .dashboard__container .new--course .course--new--released .js .course__image, .dashboard .dashboard__container .new--course .course--new--released .js .course__become--partner {
+  background-color: #8a6fd8;
+  border: 0.2rem solid #a997e1;
+}
+
+.dashboard .dashboard__container .new--course .course--new--released .js .course__image img, .dashboard .dashboard__container .new--course .course--new--released .js .course__become--partner img {
+  -webkit-filter: drop-shadow(0.5rem 0.5rem 0.1rem #a997e1);
+          filter: drop-shadow(0.5rem 0.5rem 0.1rem #a997e1);
+}
+
+.dashboard .dashboard__container .new--course .course--new--released .photography {
+  background-color: #e6f4ff;
+}
+
+.dashboard .dashboard__container .new--course .course--new--released .photography .course__image, .dashboard .dashboard__container .new--course .course--new--released .photography .course__become--partner {
+  background-color: #579be4;
+  border: 0.2rem solid #87bae9;
+}
+
+.dashboard .dashboard__container .new--course .course--new--released .photography .course__image img, .dashboard .dashboard__container .new--course .course--new--released .photography .course__become--partner img {
+  -webkit-filter: drop-shadow(0.5rem 0.5rem 0.1rem #87bae9);
+          filter: drop-shadow(0.5rem 0.5rem 0.1rem #87bae9);
 }
 
 .dashboard .dashboard__container .my__course__list .my__course--header {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -527,10 +686,23 @@ body .main .main__container {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 1.5rem 1rem;
+  margin-top: 2rem;
+}
+
+.dashboard .dashboard__container .my__course__list .my__course--header .my__course--titel {
+  font-size: 2rem;
+}
+
+.dashboard .dashboard__container .my__course__list .my__course--header .my__course--viewFullList {
+  font-size: 1.75rem;
+  color: #8a6fd8;
+  font-weight: 600;
 }
 
 .dashboard .dashboard__container .my__course__list .my__course__main {
   width: 100%;
+  margin-top: 2rem;
 }
 
 .dashboard .dashboard__container .my__course__list .my__course__main .my__course__table {
@@ -559,12 +731,12 @@ body .main .main__container {
 }
 
 .dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__course__thead tr th {
-  padding: 1.5rem 0 1.5rem 1rem;
+  padding: 1.5rem 0rem 1.5rem .5rem;
   text-align: left;
   font-weight: normal;
   z-index: 100;
   font-size: 2rem;
-  color: gray;
+  color: #5e5e60;
 }
 
 .dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody {
@@ -572,8 +744,11 @@ body .main .main__container {
 }
 
 .dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr td {
-  padding: 1.5rem 0 1.5rem 1rem;
-  font-size: 1.5rem;
+  padding: 1.5rem 0rem 1.5rem .5rem;
+}
+
+.dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr td:hover {
+  cursor: pointer;
 }
 
 .dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__name__container {
@@ -664,26 +839,26 @@ body .main .main__container {
 }
 
 .dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__name__container .my__courses__name__wrapper .my__courses__name {
-  font-size: 1.9rem;
+  font-size: 2rem;
 }
 
 .dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__name__container .my__courses__name__wrapper .my__courses__name__lessons--number {
   font-size: 1.5rem;
-  color: gray;
+  color: #5e5e60;
 }
 
 .dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__date, .dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__rate, .dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__level {
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
   border-radius: 1rem 1rem 0 0;
+  font-size: 1.5rem;
 }
 
 .dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__date::after, .dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__rate::after, .dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__level::after {
   bottom: 0;
 }
 
-.dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__date, .dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__rate {
-  font-size: 1.7rem;
+.dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__date, .dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__rate, .dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__level {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -692,12 +867,18 @@ body .main .main__container {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
   border-radius: 1rem 1rem 0 0;
+  scale: 1;
 }
 
-.dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__date::after, .dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__rate::after {
+.dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__date:hover, .dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__rate:hover, .dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__level:hover {
+  scale: 1.1;
+  cursor: pointer;
+}
+
+.dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__date::after, .dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__rate::after, .dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__level::after {
   content: "";
   position: absolute;
   left: 0;
@@ -713,7 +894,7 @@ body .main .main__container {
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-.dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__date:hover:after, .dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__rate:hover:after {
+.dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__date:hover:after, .dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__rate:hover:after, .dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__level:hover:after {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
   -webkit-transform-origin: left;

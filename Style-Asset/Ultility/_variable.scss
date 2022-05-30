@@ -33,6 +33,22 @@
      font-weight: 900;
      
 }
+@mixin placeholder($clrr) {
+     ::-webkit-input-placeholder { 
+         color: $clrr;
+     }
+     :-moz-placeholder { 
+         color: $clrr;
+        opacity:  1;
+     }
+     ::-moz-placeholder { 
+         color: $clrr;
+        opacity:  1;
+     }
+     :-ms-input-placeholder { 
+         color: $clrr;
+     }
+ }
 $light--clr : #fff ; 
 $veryLightPink--clr : #d7d3e4 ; 
 $smoth--lightpink--clr : #f5e8ff ;
@@ -49,6 +65,21 @@ $border-lightpurple--clr : #a882ff ;
 $border-verylightpurple--clr : #df9cdb ;
 $pink--clr : #886dd6 ;
 $light--gray--clr : #6c6c6c ; 
+$dark--gray--clr : #5e5e60 ; 
+/////////////////////////////////
+
+
+     $orange-clr : #fbac5f ; 
+     $light-orange-clr : #fdf0e0 ; 
+     $border-orange-clr : #f7c28e ; 
+     $purple-clr : #8a6fd8 ; 
+     $light-purple-clr : #e9e3fd ;
+     $border-purple-clr : #a997e1 ;
+     $blue-clr : #579be4 ; 
+     $light-blue-clr : #e6f4ff ;
+     $border-blue-clr : #87bae9 ; 
+
+/////////////////////////////////
 $progress-bar-stroke-width: .2rem;
 $progress-bar-size: 100%;
 
