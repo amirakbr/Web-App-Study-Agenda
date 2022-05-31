@@ -170,6 +170,7 @@ var Cal = function(divId) {
 let progressBar = document.querySelectorAll(".progress-bar__progress") ; 
 //Get Each progressBar svg
 progressBar.forEach((item) => {
+  let myCourseCours = item.parentElement.parentElement.parentElement.parentElement ;
   //Get progressBar achivment innerhtml
   let achvmentPercentage = item.parentElement.parentElement.children[1].innerHTML ;
   //Get progressBar achivment innerhtml convert to array to do some changes
@@ -181,6 +182,38 @@ progressBar.forEach((item) => {
   percentageArray.toString() ; 
   let percentageString = percentageArray.join("") ; 
   console.log(percentageString);
+  if (percentageString == 0) {
+    myCourseCours.classList.add("not--started")
+  }else if (percentageString == 100) {
+    myCourseCours.classList.add("succesfully__finished") ;
+  }
+  ////////////
+  if (percentageString <= 9) {
+      item.classList.add("str02")
+  }else if (percentageString >= 10 & percentageString <= 19) {
+      item.classList.add("str04")
+  }else if (percentageString >= 20 & percentageString <= 29) {
+    item.classList.add("str06")
+  }else if (percentageString >= 30 & percentageString <= 39) {
+    item.classList.add("str08")
+  }else if (percentageString >= 40 & percentageString <= 49) {
+    item.classList.add("str1")
+  }else if (percentageString >= 50 & percentageString <= 59) {
+    item.classList.add("str12")
+  }else if (percentageString >= 60 & percentageString <= 69) {
+    item.classList.add("str14")
+  }else if (percentageString >= 70 & percentageString <= 79) {
+    item.classList.add("str16")
+  }else if (percentageString >= 60 & percentageString <= 89) {
+    item.classList.add("str18")
+  }else if (percentageString >= 60 & percentageString <= 100) {
+    item.classList.add("str20")
+  }else {
+    console.log("there isnt any percentage in range 1 to 100");
+  }
+
+
+
   //push achivment iinnerhtml to strokoffset style for circle in svg
   item.style.strokeDashoffset = 100-(percentageString);
 })
@@ -201,15 +234,15 @@ headerLink.forEach((item) => {
   })
 })
 
-
-
-
-
-
-
-
-
-
+let courseProgresss = document.querySelectorAll(".progress__item") ;
+courseProgresss.forEach((item) => {
+  item.addEventListener("click" ,(e) => {
+    for (let i = 0; i < courseProgresss.length; i++) {
+      courseProgresss[i].setAttribute("id" , "") ; 
+    }
+    item.setAttribute("id" ,"active__prgress" )  ;
+  })
+})
 
 
 

@@ -1,52 +1,88 @@
 .profile {
      .profile__container {
-          padding: 1rem;
           .profile__header {
-               width: 100%;
-               @include display-row(center , space-between) ; 
+               @include display-row(center , space-between) ;
+               height: 5rem;
+               margin-top: 3rem;
+               padding: 1.5rem 1rem;
+               .profile__title {
+                    font-size: $normall--font ;
+               }
                .edit__profile {
                     width: 5rem;
                     height: 5rem;
-                    lord-icon {
-                         @include fit-height-width;
+                    @include display-row-center-center; 
+                    font-size: $normall--font;
+                    color: $dark--gray--clr;
+                    background-color: $light--clr;
+                    border-radius: 1rem;
+                    box-shadow: 0rem 0rem .9rem -0.5rem $light--gray--clr;
+                    transition: all .2s ease-in-out;
+                    &:hover {
+                         box-shadow: 0rem 0rem .9rem 0rem $light--gray--clr;
+                    }
+                    &::before {
+                         @include fontasome("\f4ff") ; 
                     }
                }
           }
           .profile__detail {
                @include display-column(center , flex-start) ;
+               margin-top: 3rem;
                .user__image {
-                    width: 30%;
+                    width: 40%;
                }
                .user__name {
-                    font-size: 2rem;
-                    margin-top: 1rem;
-                    
+                    font-size: $normall--sub-font;
+                    margin-top: 1.5rem;
                }
-
                .user__level {
-                    font-size: 1.8rem;
-                    margin-top: .5rem;
+                    font-size: $small--sup-font;
+                    margin-top: 1rem;
+                    color: $dark--gray--clr;
                }
           }
           .calendar {
                .calendar__container {
+                    margin-top: 3rem;
                     .current__day {
                          border-radius: 2rem;
                          overflow: hidden;
                          .current__day__container {
                               background-color: white;
-                              backdrop-filter: blur(.1rem);
                               padding: 2rem;
-                              border-radius: 2rem ; 
+                              border-radius: 0rem 1rem 1rem 1rem ; 
                               @include display-row-center-center ;
-                              z-index: +1;
+                              z-index: +10;
+                              &::before {
+                                   @include fontasome("\f111") ; 
+                                   display: table;
+                                   clear: both;
+                                   color: #20ff00;
+                                   position: absolute;
+                                   top: 0%;
+                                   left: 0%;
+                                   transform: translate(-50% , -50%);
+                                   font-size: $small--sub-font;
+                              }
+                              &::after {
+                                   content: "";
+                                   display: table;
+                                   clear: both;
+                                   position: absolute;
+                                   padding: 3rem;
+                                   border-radius: 2rem ; 
+                                   @include fit-height-width ; 
+                                   background-color: rgba(255, 255, 255, 0.42);
+                                   z-index: -1;
+                              }
                               p{
                                    margin: 0 .5rem;
-                                   font-size: 1.8rem;
+                                   font-size: $normall--sub-font;
                               }
                          }
                          width: 100%;
-                         height: 20rem;
+                         height: 25rem;
                          @include display-row-center-center ;
                          &::after {
                               position: absolute;
@@ -59,32 +95,46 @@
                               background-position: bottom;
                               background-size: cover;
                               filter: blur(.1rem);
+                              transition: all .3s ease-in-out;
                          }
                          &:hover:after {
                               animation: rotate 3s linear infinite;
+                              filter: blur(0rem);
                          }
                     }
                     .calendar__wrapper {
                          width: 100%;
-                         margin-top: 2rem;
+                         margin-top: 3rem;
                          .date__container {
                               @include display-row(center , space-between) ;
                               padding: 0 1rem;
-                              
                               .today__date {
-                                   font-size: 2rem;
+                                   font-size: $normall--font;
                               }
                               .date--button__Container {
+                                   @include display-row-center-center ;
+                                   gap: 1rem;
                                    button {
                                         font-size: 1.8rem;
                                         width: 3rem;
                                         height: 3rem;
                                         padding: .5rem;
-                                        background-color: rebeccapurple;
+                                        color: $dark--gray--clr;
+                                        background-color: $light-purple-clr;
+                                        border: .1rem solid $border-purple-clr;
                                         border-radius: 50%;
+                                        @include display-column-center-center ;
+                                        scale: 1;
+                                        transition: all .3s ease-in-out;
+                                        &:hover {
+                                             cursor: pointer;
+                                             background-color: $border-purple-clr;
+                                             border: .15rem solid $lightpurple--clr;
+                                             scale: 1.2;
+                                             color: $light--clr;
+                                        }
                                    }
                                    #btnPrev , #btnNext{
-                                        margin-right: 3rem;
                                         &::before {
                                              content: "\f053";
                                              font-family: "Font Awesome 6 Free";
@@ -106,34 +156,50 @@
                                         td {
                                              text-align: center ;
                                              padding: .5rem ;
+                                             font-size: $small--font;
                                         }
                                    }
                                    .normal , .not-current{
                                         text-align: center ;
                                         padding: .5rem ;
+
+                                   }
+                                   .not-current {
+                                        color: $dark--gray--clr;
                                    }
                                    td {
-                                        height: 3rem;
-                                        font-size: 1.8rem;
+                                        height: 4rem;
+                                        font-size: $small--sub-font;
+                                        &:hover {
+                                             cursor: pointer;
+                                        }
                                    }
                                    .today {
-                                        background-color: $pink--clr;
+                                        background-color: $purple-clr;
                                         color: $light--clr;
                                         border-radius: 50%;
-                                        width: 3rem;
                                         height: 3rem;
+                                        width: 3rem;
                                         padding: .5rem ;
                                         @include display-column-center-center ;
                                         font-size: 1.8rem;
                                         margin: 0 auto;
+                                        z-index: +1;
+                                        transition: all .3s ease-in-out;
+                                        &:hover {
+                                             animation: horizentalwave 1s linear infinite;
+                                             &::after {
+                                                  animation: backwardhorizentalwave 1s linear infinite;
+                                             }
+                                        }
                                         &::after {
                                              position: absolute;
-                                             content: ".";
-                                             display: table;
+                                             content: "";
+                                             bottom: -10%;
                                              clear: both;
-                                             bottom: -2rem;
-                                             font-size: 5rem;
-                                             color: $pink--clr;
+                                             display: table;
+                                             width: 100%;
+                                             border-bottom: .2rem solid $purple-clr;
                                         }
                                    }
                               }
@@ -145,9 +211,8 @@
                width: 100%;
                @include display-column(flex-start , center) ; 
                .my--course__progress__header {
-                    h2 {
-                         font-size: 2rem; 
-                    }
+                    font-size: $small--sup-font ;
+                    margin: 3rem 0 1rem 0 ;
                }
                .course__progress__wrapper {
                     @include display-column(flex-start , center) ; 
@@ -155,13 +220,47 @@
                     gap: 1rem;
                     .my--course__progress {
                          @include display-row(center , space-between) ;
-                         background-color: rgba(118, 255, 207, 0);
+                         background-color: $light--clr;
                          padding: 1rem 0;
+                         margin: .5rem 0;
+                         border-radius: 1rem;
+                         box-shadow: 0rem 0rem .9rem -0.5rem $light--gray--clr;
+                         border: .1rem solid transparent;
                          .my--course__progress--cours {
                               @include display-row(center , flex-start ) ;
                               gap: 1rem;
                               &:hover {
                                    .progress-bar__progress {
+                                        animation: str 2s linear ;
+                                   }
+                                   .str02 {
+                                        animation: str .2s linear ;
+                                   }
+                                   .str04 {
+                                        animation: str .4s linear ;
+                                   }
+                                   .str06 {
+                                        animation: str .6s linear ;
+                                   }
+                                   .str08 {
+                                        animation: str .8s linear ;
+                                   }
+                                   .str1 {
+                                        animation: str 1s linear ;
+                                   }
+                                   .str12{
+                                        animation: str 1.2s linear ;
+                                   }
+                                   .str14 {
+                                        animation: str 1.4s linear ;
+                                   }
+                                   .str16 {
+                                        animation: str 1.6s linear ;
+                                   }
+                                   .str18 {
+                                        animation: str 1.8s linear ;
+                                   }
+                                   .str2 {
                                         animation: str 2s linear ;
                                    }
                               }
@@ -177,14 +276,13 @@
                                       
                                       .progress-bar__background {
                                         fill: none;
-                                        stroke: #e2eff0;
+                                        stroke: #e6e6e6;
                                         stroke-width: $progress-bar-stroke-width;
                                       }
                                       
                                       .progress-bar__progress {
                                         fill: none;
-                                        stroke: #e2eff0;
-                                        stroke: #78bec7;
+                                        stroke: $purple-clr ;
                                         stroke-dasharray: 100 100;
                                         stroke-dashoffset: 100;
                                         stroke-linecap: round;
@@ -192,6 +290,7 @@
                                         transition: all 1s ease-in-out;
                                       }
                                    .my--course__progress--achivment__percentage {
+                                        font-size: $small--sub-font;
                                         position: absolute ; 
                                         top: 50% ;
                                         left: 50% ; 
@@ -203,19 +302,22 @@
                                    .my--course__progress--name {
                                         margin-bottom: .75rem;
                                         p {
-                                             font-size: 1.8rem ; 
+                                             font-size: $small--font;
                                         }
                                    }
                                    .my--course__progress--duration {
                                         margin-top: .75rem;
+                                        color: $light--gray--clr;
                                         span {
-                                             font-size: 1.5rem ; 
+                                             font-size: $small--sub-font;
                                         }
                                    }
                               }
                          }
                          .my--course__read--more {
                               margin-right: 2rem;
+                              font-size: $small--sup-font;
+                              color: $dark--gray--clr;
                               &::before {
                                    content: "\f053";
                                    font-family: "Font Awesome 6 Free";
@@ -225,6 +327,120 @@
                                    clear: both ;
                                    
                               }
+                         }
+                         .finished {
+                              display: none;
+                         }
+                    }
+                    #active__prgress {
+                         background-color: $purple-clr !important;
+                         color: $light--clr !important;
+                         border: .1rem solid $border-purple-clr !important;
+                         .progress-bar__background {
+                              stroke: #ac94ec !important;
+                         }
+                         .progress-bar__progress {
+                              stroke: $light--clr !important;
+                         }
+                         .my--course__read--more , .my--course__progress--duration{
+                              color: $light--clr !important;
+                         }
+                         &::after {
+                              background-color: $purple-clr !important;
+                              color: $light--clr !important;
+                              border: .1rem solid $border-purple-clr !important;
+                         }
+                    }
+                    .succesfully__finished {
+                         background-color: $light-green-clr;
+                         border: .15rem solid $green-clr;
+                         .progress-bar__background {
+                              stroke: $light--gray--clr !important;
+                         }
+                         .progress-bar__progress {
+                              stroke: $purple-clr !important;
+                         }
+                         .my--course__read--more , .my--course__progress--duration , .my--course__progress--achivment__percentage , .my--course__progress--name{
+                              color: black !important;
+                         }
+                         .finished {
+                              position: absolute;
+                              width: 100%;
+                              height: 100%;
+                              z-index: +1;
+                              background-color: #fff3;
+                              @include display-column-center-center ; 
+                              cursor: pointer;
+                              color: black !important;
+                              .finished__container {
+                                   @include display-column(center , flex-end) ;
+                                   gap: .5rem;
+                                   padding: .1rem 1.5rem;
+                                   background-color: rgba(255, 255, 255, 0.677);
+                                   border-radius: 1rem;
+                                   height: 100%;
+                                   .Certificate {
+                                        @include display-row-center-center ;
+                                        gap: 1rem;
+                                        padding: .5rem 1rem;
+                                        background-color: $light--clr ;
+                                        border-radius: 1rem;
+                                        margin-bottom: 1rem;
+                                        p {
+                                             font-size: 1.5rem;
+                                        }
+                                        &::after {
+                                             @include fontasome("\f08e") ;
+                                             font-size: $small--font;
+                                        }
+                                   }
+                              }
+                         }
+                         
+                    }
+                    .not--started {
+                         background-color: #ffe3e3 !important;
+                         border: .15rem solid red;
+                         border-radius: 1rem;
+                         transition: all .3s ease-in-out;
+                         .progress-bar__background {
+                              stroke: #e6e6e6 !important;
+                         }
+                         .progress-bar__progress {
+                              stroke: $purple-clr !important;
+                         }
+                         .my--course__read--more , .my--course__progress--duration , .my--course__progress--achivment__percentage , .my--course__progress--name{
+                              color: black !important;
+                         }
+                         &:hover {
+                              border-radius: 0rem 1rem 1rem 0rem ;
+                              &::after {
+                                   transform: translate(0% ,-50% )  scaleX(1) rotateY(0deg);
+                                   background-color: #ffe3e3 !important;
+                                   border: .15rem solid red;
+                                   border-right: transparent;
+                              }
+                         }
+                         &::after {
+                              content: "Enrol \A Now";
+                              white-space: pre;
+                              display: block;  
+                              display: table ;
+                              clear: both ;
+                              position: absolute ; 
+                              background-color: white ;
+                              color: black !important;
+                              height: 100%;
+                              padding: 0rem 2rem;
+                              font-size: $small--font;
+                              border-radius: 1rem 0rem 0rem 1rem;
+                              @include display-column-center-center ;
+                              top: 50% ;
+                              right: 100% ;
+                              transform: translate(0% ,-50% )  scaleX(0) rotateY(90deg) ;
+                              box-shadow: 0rem 0rem .9rem -0.5rem $light--gray--clr;
+                              transform-origin: right ; 
+                              transition: all .3s ease-in-out ;
                          }
                     }
                }
@@ -262,5 +478,27 @@
      }
      100%{
           stroke-dashoffset : auto; 
+     }
+}
+@keyframes horizentalwave {
+     0%{
+          transform: translateY(0%);
+     }
+     50%{
+          transform: translateY(-.5rem);
+     }
+     100%{
+          transform: translateY(0%);
+     }
+}
+@keyframes backwardhorizentalwave {
+     0%{
+          transform: translateY(0%);
+     }
+     50%{
+          transform: translateY(.5rem);
+     }
+     100%{
+          transform: translateY(0%);
      }
 }

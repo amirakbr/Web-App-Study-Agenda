@@ -17,6 +17,11 @@
                          border-radius: 1rem;
                          overflow: hidden;
                          @include placeholder(#909090) ; 
+                         box-shadow: 0rem 0rem .9rem -0.5rem $light--gray--clr;
+                         transition: all .2s ease-in-out;
+                         &:hover {
+                              box-shadow: 0rem 0rem .9rem 0rem $light--gray--clr;
+                         }
                          input {
                               border: none;
                               outline: none;
@@ -37,6 +42,11 @@
                          border-radius: 1rem;
                          background-color: $light--clr;
                          color: $dark--gray--clr;
+                         box-shadow: 0rem 0rem .9rem -0.5rem $light--gray--clr;
+                         transition: all .2s ease-in-out;
+                         &:hover {
+                              box-shadow: 0rem 0rem .9rem 0rem $light--gray--clr;
+                         }
                          &::before {
                               @include fontasome("\f0f3") ; 
                               font-size: $normall--sub-font;

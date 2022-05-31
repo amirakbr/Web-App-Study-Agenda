@@ -49,6 +49,9 @@ body .main .main__container {
   display: grid;
   -ms-grid-columns: minmax(25rem, 0.5fr) 2fr 1fr;
       grid-template-columns: minmax(25rem, 0.5fr) 2fr 1fr;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   gap: 3rem;
   position: relative;
   padding: 2rem 3rem;
@@ -416,6 +419,10 @@ body .main .main__container {
   background-color: #fff;
   border-radius: 1rem;
   overflow: hidden;
+  -webkit-box-shadow: 0rem 0rem 0.9rem -0.5rem #6c6c6c;
+          box-shadow: 0rem 0rem 0.9rem -0.5rem #6c6c6c;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 .dashboard .dashboard__container .dashboard__header .dashboard__course--interface .dashboard__search--box ::-webkit-input-placeholder {
@@ -434,6 +441,11 @@ body .main .main__container {
 
 .dashboard .dashboard__container .dashboard__header .dashboard__course--interface .dashboard__search--box :-ms-input-placeholder {
   color: #909090;
+}
+
+.dashboard .dashboard__container .dashboard__header .dashboard__course--interface .dashboard__search--box:hover {
+  -webkit-box-shadow: 0rem 0rem 0.9rem 0rem #6c6c6c;
+          box-shadow: 0rem 0rem 0.9rem 0rem #6c6c6c;
 }
 
 .dashboard .dashboard__container .dashboard__header .dashboard__course--interface .dashboard__search--box input {
@@ -459,6 +471,15 @@ body .main .main__container {
   border-radius: 1rem;
   background-color: #fff;
   color: #5e5e60;
+  -webkit-box-shadow: 0rem 0rem 0.9rem -0.5rem #6c6c6c;
+          box-shadow: 0rem 0rem 0.9rem -0.5rem #6c6c6c;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.dashboard .dashboard__container .dashboard__header .dashboard__course--interface .dashboard__notification--alert:hover {
+  -webkit-box-shadow: 0rem 0rem 0.9rem 0rem #6c6c6c;
+          box-shadow: 0rem 0rem 0.9rem 0rem #6c6c6c;
 }
 
 .dashboard .dashboard__container .dashboard__header .dashboard__course--interface .dashboard__notification--alert::before {
@@ -843,7 +864,7 @@ body .main .main__container {
 }
 
 .dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__name__container .my__courses__name__wrapper .my__courses__name__lessons--number {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   color: #5e5e60;
 }
 
@@ -851,7 +872,7 @@ body .main .main__container {
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
   border-radius: 1rem 1rem 0 0;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 
 .dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__date::after, .dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__rate::after, .dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__level::after {
@@ -1045,12 +1066,7 @@ body .main .main__container {
   }
 }
 
-.profile .profile__container {
-  padding: 1rem;
-}
-
 .profile .profile__container .profile__header {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1064,16 +1080,50 @@ body .main .main__container {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  height: 5rem;
+  margin-top: 3rem;
+  padding: 1.5rem 1rem;
+}
+
+.profile .profile__container .profile__header .profile__title {
+  font-size: 2.5rem;
 }
 
 .profile .profile__container .profile__header .edit__profile {
   width: 5rem;
   height: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 2.5rem;
+  color: #5e5e60;
+  background-color: #fff;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0rem 0rem 0.9rem -0.5rem #6c6c6c;
+          box-shadow: 0rem 0rem 0.9rem -0.5rem #6c6c6c;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
-.profile .profile__container .profile__header .edit__profile lord-icon {
-  height: 100%;
-  width: 100%;
+.profile .profile__container .profile__header .edit__profile:hover {
+  -webkit-box-shadow: 0rem 0rem 0.9rem 0rem #6c6c6c;
+          box-shadow: 0rem 0rem 0.9rem 0rem #6c6c6c;
+}
+
+.profile .profile__container .profile__header .edit__profile::before {
+  content: "";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
 }
 
 .profile .profile__container .profile__detail {
@@ -1090,27 +1140,33 @@ body .main .main__container {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  margin-top: 3rem;
 }
 
 .profile .profile__container .profile__detail .user__image {
-  width: 30%;
+  width: 40%;
 }
 
 .profile .profile__container .profile__detail .user__name {
-  font-size: 2rem;
-  margin-top: 1rem;
+  font-size: 2.25rem;
+  margin-top: 1.5rem;
 }
 
 .profile .profile__container .profile__detail .user__level {
-  font-size: 1.8rem;
-  margin-top: .5rem;
+  font-size: 2rem;
+  margin-top: 1rem;
+  color: #5e5e60;
+}
+
+.profile .profile__container .calendar .calendar__container {
+  margin-top: 3rem;
 }
 
 .profile .profile__container .calendar .calendar__container .current__day {
   border-radius: 2rem;
   overflow: hidden;
   width: 100%;
-  height: 20rem;
+  height: 25rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1128,10 +1184,8 @@ body .main .main__container {
 
 .profile .profile__container .calendar .calendar__container .current__day .current__day__container {
   background-color: white;
-  -webkit-backdrop-filter: blur(0.1rem);
-          backdrop-filter: blur(0.1rem);
   padding: 2rem;
-  border-radius: 2rem;
+  border-radius: 0rem 1rem 1rem 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1145,12 +1199,40 @@ body .main .main__container {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  z-index: +1;
+  z-index: +10;
+}
+
+.profile .profile__container .calendar .calendar__container .current__day .current__day__container::before {
+  content: "";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  display: table;
+  clear: both;
+  color: #20ff00;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 1.6rem;
+}
+
+.profile .profile__container .calendar .calendar__container .current__day .current__day__container::after {
+  content: "";
+  display: table;
+  clear: both;
+  position: absolute;
+  padding: 3rem;
+  border-radius: 2rem;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.42);
+  z-index: -1;
 }
 
 .profile .profile__container .calendar .calendar__container .current__day .current__day__container p {
   margin: 0 .5rem;
-  font-size: 1.8rem;
+  font-size: 2.25rem;
 }
 
 .profile .profile__container .calendar .calendar__container .current__day::after {
@@ -1166,16 +1248,20 @@ body .main .main__container {
   background-size: cover;
   -webkit-filter: blur(0.1rem);
           filter: blur(0.1rem);
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 .profile .profile__container .calendar .calendar__container .current__day:hover:after {
   -webkit-animation: rotate 3s linear infinite;
           animation: rotate 3s linear infinite;
+  -webkit-filter: blur(0rem);
+          filter: blur(0rem);
 }
 
 .profile .profile__container .calendar .calendar__container .calendar__wrapper {
   width: 100%;
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 .profile .profile__container .calendar .calendar__container .calendar__wrapper .date__container {
@@ -1196,7 +1282,24 @@ body .main .main__container {
 }
 
 .profile .profile__container .calendar .calendar__container .calendar__wrapper .date__container .today__date {
-  font-size: 2rem;
+  font-size: 2.5rem;
+}
+
+.profile .profile__container .calendar .calendar__container .calendar__wrapper .date__container .date--button__Container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
 }
 
 .profile .profile__container .calendar .calendar__container .calendar__wrapper .date__container .date--button__Container button {
@@ -1204,12 +1307,34 @@ body .main .main__container {
   width: 3rem;
   height: 3rem;
   padding: .5rem;
-  background-color: rebeccapurple;
+  color: #5e5e60;
+  background-color: #e9e3fd;
+  border: 0.1rem solid #a997e1;
   border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  scale: 1;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
-.profile .profile__container .calendar .calendar__container .calendar__wrapper .date__container .date--button__Container #btnPrev, .profile .profile__container .calendar .calendar__container .calendar__wrapper .date__container .date--button__Container #btnNext {
-  margin-right: 3rem;
+.profile .profile__container .calendar .calendar__container .calendar__wrapper .date__container .date--button__Container button:hover {
+  cursor: pointer;
+  background-color: #a997e1;
+  border: 0.15rem solid #f3eeff;
+  scale: 1.2;
+  color: #fff;
 }
 
 .profile .profile__container .calendar .calendar__container .calendar__wrapper .date__container .date--button__Container #btnPrev::before, .profile .profile__container .calendar .calendar__container .calendar__wrapper .date__container .date--button__Container #btnNext::before {
@@ -1232,6 +1357,7 @@ body .main .main__container {
 .profile .profile__container .calendar .calendar__container .calendar__wrapper table tbody .days td {
   text-align: center;
   padding: .5rem;
+  font-size: 1.75rem;
 }
 
 .profile .profile__container .calendar .calendar__container .calendar__wrapper table tbody .normal, .profile .profile__container .calendar .calendar__container .calendar__wrapper table tbody .not-current {
@@ -1239,17 +1365,25 @@ body .main .main__container {
   padding: .5rem;
 }
 
+.profile .profile__container .calendar .calendar__container .calendar__wrapper table tbody .not-current {
+  color: #5e5e60;
+}
+
 .profile .profile__container .calendar .calendar__container .calendar__wrapper table tbody td {
-  height: 3rem;
-  font-size: 1.8rem;
+  height: 4rem;
+  font-size: 1.6rem;
+}
+
+.profile .profile__container .calendar .calendar__container .calendar__wrapper table tbody td:hover {
+  cursor: pointer;
 }
 
 .profile .profile__container .calendar .calendar__container .calendar__wrapper table tbody .today {
-  background-color: #886dd6;
+  background-color: #8a6fd8;
   color: #fff;
   border-radius: 50%;
-  width: 3rem;
   height: 3rem;
+  width: 3rem;
   padding: .5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1266,16 +1400,29 @@ body .main .main__container {
           justify-content: center;
   font-size: 1.8rem;
   margin: 0 auto;
+  z-index: +1;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.profile .profile__container .calendar .calendar__container .calendar__wrapper table tbody .today:hover {
+  -webkit-animation: horizentalwave 1s linear infinite;
+          animation: horizentalwave 1s linear infinite;
+}
+
+.profile .profile__container .calendar .calendar__container .calendar__wrapper table tbody .today:hover::after {
+  -webkit-animation: backwardhorizentalwave 1s linear infinite;
+          animation: backwardhorizentalwave 1s linear infinite;
 }
 
 .profile .profile__container .calendar .calendar__container .calendar__wrapper table tbody .today::after {
   position: absolute;
-  content: ".";
-  display: table;
+  content: "";
+  bottom: -10%;
   clear: both;
-  bottom: -2rem;
-  font-size: 5rem;
-  color: #886dd6;
+  display: table;
+  width: 100%;
+  border-bottom: 0.2rem solid #8a6fd8;
 }
 
 .profile .profile__container .my--course__progress {
@@ -1295,8 +1442,9 @@ body .main .main__container {
           justify-content: center;
 }
 
-.profile .profile__container .my--course__progress .my--course__progress__header h2 {
+.profile .profile__container .my--course__progress .my--course__progress__header {
   font-size: 2rem;
+  margin: 3rem 0 1rem 0;
 }
 
 .profile .profile__container .my--course__progress .course__progress__wrapper {
@@ -1331,8 +1479,13 @@ body .main .main__container {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: rgba(118, 255, 207, 0);
+  background-color: #fff;
   padding: 1rem 0;
+  margin: .5rem 0;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0rem 0rem 0.9rem -0.5rem #6c6c6c;
+          box-shadow: 0rem 0rem 0.9rem -0.5rem #6c6c6c;
+  border: .1rem solid transparent;
 }
 
 .profile .profile__container .my--course__progress .course__progress__wrapper .my--course__progress .my--course__progress--cours {
@@ -1357,6 +1510,56 @@ body .main .main__container {
           animation: str 2s linear;
 }
 
+.profile .profile__container .my--course__progress .course__progress__wrapper .my--course__progress .my--course__progress--cours:hover .str02 {
+  -webkit-animation: str .2s linear;
+          animation: str .2s linear;
+}
+
+.profile .profile__container .my--course__progress .course__progress__wrapper .my--course__progress .my--course__progress--cours:hover .str04 {
+  -webkit-animation: str .4s linear;
+          animation: str .4s linear;
+}
+
+.profile .profile__container .my--course__progress .course__progress__wrapper .my--course__progress .my--course__progress--cours:hover .str06 {
+  -webkit-animation: str .6s linear;
+          animation: str .6s linear;
+}
+
+.profile .profile__container .my--course__progress .course__progress__wrapper .my--course__progress .my--course__progress--cours:hover .str08 {
+  -webkit-animation: str .8s linear;
+          animation: str .8s linear;
+}
+
+.profile .profile__container .my--course__progress .course__progress__wrapper .my--course__progress .my--course__progress--cours:hover .str1 {
+  -webkit-animation: str 1s linear;
+          animation: str 1s linear;
+}
+
+.profile .profile__container .my--course__progress .course__progress__wrapper .my--course__progress .my--course__progress--cours:hover .str12 {
+  -webkit-animation: str 1.2s linear;
+          animation: str 1.2s linear;
+}
+
+.profile .profile__container .my--course__progress .course__progress__wrapper .my--course__progress .my--course__progress--cours:hover .str14 {
+  -webkit-animation: str 1.4s linear;
+          animation: str 1.4s linear;
+}
+
+.profile .profile__container .my--course__progress .course__progress__wrapper .my--course__progress .my--course__progress--cours:hover .str16 {
+  -webkit-animation: str 1.6s linear;
+          animation: str 1.6s linear;
+}
+
+.profile .profile__container .my--course__progress .course__progress__wrapper .my--course__progress .my--course__progress--cours:hover .str18 {
+  -webkit-animation: str 1.8s linear;
+          animation: str 1.8s linear;
+}
+
+.profile .profile__container .my--course__progress .course__progress__wrapper .my--course__progress .my--course__progress--cours:hover .str2 {
+  -webkit-animation: str 2s linear;
+          animation: str 2s linear;
+}
+
 .profile .profile__container .my--course__progress .course__progress__wrapper .my--course__progress .my--course__progress--cours .my--course__progress--achivment {
   width: 5rem;
   height: 5rem;
@@ -1372,14 +1575,13 @@ body .main .main__container {
 
 .profile .profile__container .my--course__progress .course__progress__wrapper .my--course__progress .my--course__progress--cours .my--course__progress--achivment .progress-bar__background {
   fill: none;
-  stroke: #e2eff0;
+  stroke: #e6e6e6;
   stroke-width: 0.2rem;
 }
 
 .profile .profile__container .my--course__progress .course__progress__wrapper .my--course__progress .my--course__progress--cours .my--course__progress--achivment .progress-bar__progress {
   fill: none;
-  stroke: #e2eff0;
-  stroke: #78bec7;
+  stroke: #8a6fd8;
   stroke-dasharray: 100 100;
   stroke-dashoffset: 100;
   stroke-linecap: round;
@@ -1389,6 +1591,7 @@ body .main .main__container {
 }
 
 .profile .profile__container .my--course__progress .course__progress__wrapper .my--course__progress .my--course__progress--cours .my--course__progress--achivment .my--course__progress--achivment__percentage {
+  font-size: 1.6rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1417,19 +1620,22 @@ body .main .main__container {
 }
 
 .profile .profile__container .my--course__progress .course__progress__wrapper .my--course__progress .my--course__progress--cours .my--course__progress--details .my--course__progress--name p {
-  font-size: 1.8rem;
+  font-size: 1.75rem;
 }
 
 .profile .profile__container .my--course__progress .course__progress__wrapper .my--course__progress .my--course__progress--cours .my--course__progress--details .my--course__progress--duration {
   margin-top: .75rem;
+  color: #6c6c6c;
 }
 
 .profile .profile__container .my--course__progress .course__progress__wrapper .my--course__progress .my--course__progress--cours .my--course__progress--details .my--course__progress--duration span {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 
 .profile .profile__container .my--course__progress .course__progress__wrapper .my--course__progress .my--course__read--more {
   margin-right: 2rem;
+  font-size: 2rem;
+  color: #5e5e60;
 }
 
 .profile .profile__container .my--course__progress .course__progress__wrapper .my--course__progress .my--course__read--more::before {
@@ -1439,6 +1645,197 @@ body .main .main__container {
   rotate: 180deg;
   display: table;
   clear: both;
+}
+
+.profile .profile__container .my--course__progress .course__progress__wrapper .my--course__progress .finished {
+  display: none;
+}
+
+.profile .profile__container .my--course__progress .course__progress__wrapper #active__prgress {
+  background-color: #8a6fd8 !important;
+  color: #fff !important;
+  border: 0.1rem solid #a997e1 !important;
+}
+
+.profile .profile__container .my--course__progress .course__progress__wrapper #active__prgress .progress-bar__background {
+  stroke: #ac94ec !important;
+}
+
+.profile .profile__container .my--course__progress .course__progress__wrapper #active__prgress .progress-bar__progress {
+  stroke: #fff !important;
+}
+
+.profile .profile__container .my--course__progress .course__progress__wrapper #active__prgress .my--course__read--more, .profile .profile__container .my--course__progress .course__progress__wrapper #active__prgress .my--course__progress--duration {
+  color: #fff !important;
+}
+
+.profile .profile__container .my--course__progress .course__progress__wrapper #active__prgress::after {
+  background-color: #8a6fd8 !important;
+  color: #fff !important;
+  border: 0.1rem solid #a997e1 !important;
+}
+
+.profile .profile__container .my--course__progress .course__progress__wrapper .succesfully__finished {
+  background-color: #aaff8b;
+  border: 0.15rem solid #acffc9;
+}
+
+.profile .profile__container .my--course__progress .course__progress__wrapper .succesfully__finished .progress-bar__background {
+  stroke: #6c6c6c !important;
+}
+
+.profile .profile__container .my--course__progress .course__progress__wrapper .succesfully__finished .progress-bar__progress {
+  stroke: #8a6fd8 !important;
+}
+
+.profile .profile__container .my--course__progress .course__progress__wrapper .succesfully__finished .my--course__read--more, .profile .profile__container .my--course__progress .course__progress__wrapper .succesfully__finished .my--course__progress--duration, .profile .profile__container .my--course__progress .course__progress__wrapper .succesfully__finished .my--course__progress--achivment__percentage, .profile .profile__container .my--course__progress .course__progress__wrapper .succesfully__finished .my--course__progress--name {
+  color: black !important;
+}
+
+.profile .profile__container .my--course__progress .course__progress__wrapper .succesfully__finished .finished {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: +1;
+  background-color: #fff3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  color: black !important;
+}
+
+.profile .profile__container .my--course__progress .course__progress__wrapper .succesfully__finished .finished .finished__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: .5rem;
+  padding: .1rem 1.5rem;
+  background-color: rgba(255, 255, 255, 0.677);
+  border-radius: 1rem;
+  height: 100%;
+}
+
+.profile .profile__container .my--course__progress .course__progress__wrapper .succesfully__finished .finished .finished__container .Certificate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+  padding: .5rem 1rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.profile .profile__container .my--course__progress .course__progress__wrapper .succesfully__finished .finished .finished__container .Certificate p {
+  font-size: 1.5rem;
+}
+
+.profile .profile__container .my--course__progress .course__progress__wrapper .succesfully__finished .finished .finished__container .Certificate::after {
+  content: "";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 1.75rem;
+}
+
+.profile .profile__container .my--course__progress .course__progress__wrapper .not--started {
+  background-color: #ffe3e3 !important;
+  border: .15rem solid red;
+  border-radius: 1rem;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.profile .profile__container .my--course__progress .course__progress__wrapper .not--started .progress-bar__background {
+  stroke: #e6e6e6 !important;
+}
+
+.profile .profile__container .my--course__progress .course__progress__wrapper .not--started .progress-bar__progress {
+  stroke: #8a6fd8 !important;
+}
+
+.profile .profile__container .my--course__progress .course__progress__wrapper .not--started .my--course__read--more, .profile .profile__container .my--course__progress .course__progress__wrapper .not--started .my--course__progress--duration, .profile .profile__container .my--course__progress .course__progress__wrapper .not--started .my--course__progress--achivment__percentage, .profile .profile__container .my--course__progress .course__progress__wrapper .not--started .my--course__progress--name {
+  color: black !important;
+}
+
+.profile .profile__container .my--course__progress .course__progress__wrapper .not--started:hover {
+  border-radius: 0rem 1rem 1rem 0rem;
+}
+
+.profile .profile__container .my--course__progress .course__progress__wrapper .not--started:hover::after {
+  -webkit-transform: translate(0%, -50%) scaleX(1) rotateY(0deg);
+          transform: translate(0%, -50%) scaleX(1) rotateY(0deg);
+  background-color: #ffe3e3 !important;
+  border: .15rem solid red;
+  border-right: transparent;
+}
+
+.profile .profile__container .my--course__progress .course__progress__wrapper .not--started::after {
+  content: "Enrol \A Now";
+  white-space: pre;
+  display: block;
+  display: table;
+  clear: both;
+  position: absolute;
+  background-color: white;
+  color: black !important;
+  height: 100%;
+  padding: 0rem 2rem;
+  font-size: 1.75rem;
+  border-radius: 1rem 0rem 0rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 50%;
+  right: 100%;
+  -webkit-transform: translate(0%, -50%) scaleX(0) rotateY(90deg);
+          transform: translate(0%, -50%) scaleX(0) rotateY(90deg);
+  -webkit-box-shadow: 0rem 0rem 0.9rem -0.5rem #6c6c6c;
+          box-shadow: 0rem 0rem 0.9rem -0.5rem #6c6c6c;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 .varified {
@@ -1511,6 +1908,66 @@ body .main .main__container {
   }
   100% {
     stroke-dashoffset: auto;
+  }
+}
+
+@-webkit-keyframes horizentalwave {
+  0% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  50% {
+    -webkit-transform: translateY(-0.5rem);
+            transform: translateY(-0.5rem);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes horizentalwave {
+  0% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  50% {
+    -webkit-transform: translateY(-0.5rem);
+            transform: translateY(-0.5rem);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@-webkit-keyframes backwardhorizentalwave {
+  0% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  50% {
+    -webkit-transform: translateY(0.5rem);
+            transform: translateY(0.5rem);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes backwardhorizentalwave {
+  0% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  50% {
+    -webkit-transform: translateY(0.5rem);
+            transform: translateY(0.5rem);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
   }
 }
 /*# sourceMappingURL=Style.css.map */
