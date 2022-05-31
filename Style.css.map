@@ -10,7 +10,8 @@
         "Style-Asset/Layout/_LeftSide-tab.scss",
         "Style-Asset/Ultility/_variable.scss",
         "Style-Asset/Layout/_Dashboard.scss",
-        "Style-Asset/Layout/_profile.scss"
+        "Style-Asset/Layout/_profile.scss",
+        "PagesStyleAssets/Help.scss"
     ],
     "names": [],
     "file": "Style.css"

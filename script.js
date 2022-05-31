@@ -246,6 +246,24 @@ courseProgresss.forEach((item) => {
 
 
 
+function loadDashboard() {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
+    document.querySelector("body").innerHTML =
+    this.responseText;
+  }
+  xhttp.open("GET", "index.html");
+  xhttp.send();
+}
+function loadDoc() {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
+    document.querySelector("body").innerHTML =
+    this.responseText;
+  }
+  xhttp.open("GET", "Pages/Help.html");
+  xhttp.send();
+}
 
 
 

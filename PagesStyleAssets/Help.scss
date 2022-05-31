@@ -1,0 +1,38 @@
+@import "../Style-Asset/Ultility/variable" ;
+@import "../Style-Asset/Layout/LeftSide-tab" ;
+.main{
+     .main__container {
+          overflow: auto;         
+          grid-template-columns: minmax(30rem, 0.35fr) 1fr !important ; 
+          .wrapper__help {
+               .help__container {
+                    .help__title {
+                         font-size: $normall--font;
+                         height: 5rem;
+                         @include display-row(center , flex-start) ;
+                         margin-top: 3rem;
+                         h3 {
+                              background-color: #fbfbfb;
+                              z-index: +1;
+                              padding: 1rem 1.5rem;
+                         }
+                         &::after {
+                              position: absolute;
+                              width: 100%;
+                              content: "";
+                              display: table;
+                              clear: both;
+                              border-bottom: .2rem solid black;
+                         }
+                    }
+                    .help__container {
+                         display: grid;
+                         grid-template-columns: repeat(auto-fit , minmax(20rem , 1fr)) ; 
+                         .help__toturial {
+                              @include display-column(flex-start , center) ;
+                         }
+                    }
+               }
+          }
+     }
+}
