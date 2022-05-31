@@ -1856,9 +1856,9 @@ body .main .main__container {
 
 .varified::after {
   content: url(../../Media-Asset/varified.svg);
-  height: 2.5rem;
-  width: 2.5rem;
-  background-size: 2.5rem 2.5rem;
+  height: 3rem;
+  width: 3rem;
+  background-size: 3rem 3rem;
   left: calc(100% + 5%);
   position: absolute;
 }
