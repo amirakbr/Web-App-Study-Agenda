@@ -1,0 +1,45 @@
+.setting__container {
+  margin-top: 3rem;
+}
+
+.setting__container .setting {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30rem;
+      grid-template-columns: 30rem;
+  gap: 1rem;
+}
+
+.setting__container .setting p {
+  padding: 1.5rem 2rem;
+  border: 0.15rem solid #6c6c6c;
+  border-radius: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  font-size: 2rem;
+}
+
+.setting__container .setting p:hover {
+  -webkit-transform: translateX(3rem);
+          transform: translateX(3rem);
+  cursor: pointer;
+}
+
+.setting__container .setting p::after {
+  content: "\f053";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  rotate: 180deg;
+  display: table;
+  clear: both;
+}
+/*# sourceMappingURL=setting.css.map */

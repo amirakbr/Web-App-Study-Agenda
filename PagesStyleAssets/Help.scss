@@ -27,9 +27,25 @@
                     }
                     .help__container {
                          display: grid;
-                         grid-template-columns: repeat(auto-fit , minmax(20rem , 1fr)) ; 
+                         grid-template-columns: repeat(auto-fit , minmax(25rem , 1fr)) ; 
+                         gap: 1rem 2rem;
+                         margin-top: 3rem;
                          .help__toturial {
                               @include display-column(flex-start , center) ;
+                              padding: 1rem 2rem;
+                              border: .1rem solid $veryLightPink--clr;
+                              border-radius: 2rem;
+                              .help__toturial--detail {
+                                   @include display-column(flex-start , center) ; 
+                                   .toturial__titel {
+                                        font-size: $small--sup-font;
+                                        margin-top: 2rem;
+                                   }
+                                   .toturial__duration {
+                                        font-size: $small--sub-font;
+                                        margin-top: 1rem;
+                                   }
+                              }
                          }
                     }
                }

@@ -347,8 +347,10 @@
 .main .main__container .wrapper__help .help__container .help__container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(20rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1rem 2rem;
+  margin-top: 3rem;
 }
 
 .main .main__container .wrapper__help .help__container .help__container .help__toturial {
@@ -365,5 +367,34 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 1rem 2rem;
+  border: 0.1rem solid #d7d3e4;
+  border-radius: 2rem;
+}
+
+.main .main__container .wrapper__help .help__container .help__container .help__toturial .help__toturial--detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main .main__container .wrapper__help .help__container .help__container .help__toturial .help__toturial--detail .toturial__titel {
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+
+.main .main__container .wrapper__help .help__container .help__container .help__toturial .help__toturial--detail .toturial__duration {
+  font-size: 1.6rem;
+  margin-top: 1rem;
 }
 /*# sourceMappingURL=Help.css.map */

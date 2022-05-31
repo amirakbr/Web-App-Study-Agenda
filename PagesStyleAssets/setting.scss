@@ -1,0 +1,31 @@
+@import "../Style-Asset/Ultility/variable" ;
+.setting__container {
+     margin-top: 3rem;
+     .setting {
+          display: grid;
+          grid-template-columns: 30rem;
+          gap: 1rem;
+          p {
+               padding: 1.5rem 2rem;
+               border: .15rem solid $light--gray--clr;
+               border-radius: 1rem;
+               display: flex;
+               align-items: center;
+               justify-content: space-between;
+               transition: all .3s ease-in-out;
+               font-size: $small--sup-font;
+               &:hover {
+                    transform: translateX(3rem);
+                    cursor: pointer;
+               }
+               &::after {
+                    content: "\f053";
+                    font-family: "Font Awesome 6 Free";
+                    font-weight: 900;
+                    rotate: 180deg;
+                    display: table;
+                    clear: both;
+               }
+          }
+     }
+}

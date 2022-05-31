@@ -1,0 +1,87 @@
+@import "../Style-Asset/Ultility/variable" ;
+.chat__container {
+     display: grid;
+     grid-template-columns: .7fr 1fr;
+     .contact__container {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          margin-top: 3rem;
+          gap: 1rem;
+          .contact {
+               display: grid;
+               grid-template-columns: 1fr 1rem;
+               align-items: center;
+               gap: 1rem;
+               padding: 1rem 2rem;
+               border: .15rem solid $veryLightPink--clr;
+               border-radius: 1rem;
+               .contact__chat {
+                    @include display-row(center , flex-start) ; 
+                    gap : 2rem ;
+                    .contact__image {
+                         height: 5rem;
+                    }
+                    .contact__detail {
+                         @include display-column(flex-start , space-between) ;
+                         gap : 1rem ; 
+                         .contact__name {
+                              font-size: $small--font;
+                         }
+                         .contact__last--message {
+                              @include display-row(center , space-between) ; 
+                              overflow: hidden;
+                              span {
+                                   font-size: $small--font;
+                                   color:  $veryLightPink--clr;
+                                   margin-right: 1rem;
+                              }
+                              p {
+                                   font-size: $small--sub-font;
+                              }
+                         }
+                    }
+               }
+               .notificatiion {
+                    color: $light--clr;
+                    padding: .5rem;
+                    background-color: rgb(0, 192, 0);
+                    width: 1rem;
+                    height: 1rem;
+                    border-radius: 50%;
+                    @include display-column(center ,center) ;
+                    font-size: $small--sup-font;
+               }
+          }
+     }
+     .chat__window {
+          border: .1rem solid $veryLightPink--clr;
+          display : flex ; 
+          flex-direction : column ;
+          .chat--window__header {
+               @include display-row(center , flex-start) ;
+               padding : 1rem 2rem ;
+               gap: 3rem;
+               border-bottom: .1rem solid $dark--gray--clr;
+               box-shadow: 0rem 1rem 1rem -1rem #6c6c6c;
+               .chat--user__image {
+                    height: 4rem;
+               }
+               .chat__user--detail {
+                    @include display-column(flex-start , center) ;
+                    gap: 1rem;
+                    .chat__user--name {
+                         font-size: $small--sup-font;
+                    }
+                    .chat__user--lastseen {
+                         font-size: $small--font;
+                         color: $light--gray--clr;
+                    }
+               }
+          }
+          .chat--window__body {
+               position: relative;
+               height: 100%;
+          }
+     }
+}

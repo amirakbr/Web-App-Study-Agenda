@@ -15,5 +15,8 @@ body {
                position: relative;
                padding: 2rem 3rem;
           }
+          #main {
+               grid-template-columns: minmax(25rem , .4fr) 2fr minmax(25rem , .5fr)  !important;
+          }
      }
 }

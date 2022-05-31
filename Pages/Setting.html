@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     
+     <link rel="stylesheet" type="text/css" href="../PagesStyleAssets/Help.css">
+     <link rel="stylesheet" type="text/css" href="../PagesStyleAssets/setting.css">
+     <link rel="stylesheet" type="text/css" href="../Style.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/brands.min.css" integrity="sha512-OivR4OdSsE1onDm/i3J3Hpsm5GmOVvr9r49K3jJ0dnsxVzZgaOJ5MfxEAxCyGrzWozL9uJGKz6un3A7L+redIQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css" integrity="sha512-xX2rYBFJSj86W54Fyv1de80DWBq7zYLn2z0I9bIhQG+rxIF6XVJUpdGnsNHWRa6AvP89vtFupEPDP8eZAtu9qA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/regular.min.css" integrity="sha512-YoxvmIzlVlt4nYJ6QwBqDzFc+2aXL7yQwkAuscf2ZAg7daNQxlgQHV+LLRHnRXFWPHRvXhJuBBjQqHAqRFkcVw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/svg-with-js.min.css" integrity="sha512-U7WyVKwgyoYSa+qowujpUQIH3omU6SlFFr8m6kiEuuM1lWqoiURgTNskMFEf1la4PDNQzMws/G1u0wKGNxVbcQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/v4-font-face.min.css" integrity="sha512-6G7jwBgoDnShmGCEha+LlzpMNWBHhGYZ6QCHfIXlaHoX9X5eunFwUZRYj8WSaooev6DIWqQXZ6syn2yup6kGZg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+     <style>
+          .help__video {
+               height: 15rem !important;
+               margin: 0 auto;
+          }
+     </style>
+</head>
+<body>
+     <div class="main">
+          <div class="main__container help">
+               <div class="left--side__tab__container">
+                    <div class="title">
+                         <span>
+                              Academy
+                         </span>
+                    </div>
+                    <div class="left__tab--link">
+                         <ul>
+                              <li class="header__link dashboard" onclick="loadDashboard()" >
+                                   <p>
+                                        Dashboard
+                                   </p>
+                              </li>
+                              <li class="header__link course" onclick="loadcourses()">
+                                   <p>
+                                        Courses
+                                   </p>
+                              </li>
+                              <li class="header__link chat" onclick="loadchat()">
+                                   <p>
+                                        Chats
+                                   </p>
+                              </li>
+                              <li class="header__link grade" onclick="loadgrade()">
+                                   <p>
+                                        Grades
+                                   </p>
+                              </li>
+                              <li class="header__link schedule" onclick="loadscheduel()">
+                                   <p>
+                                        Schedule
+                                   </p>
+                              </li>
+                              <li class="activate__header header__link setting" onclick="loadsetting()">
+                                   <p>
+                                        Settings
+                                   </p>
+                              </li>
+                              <li class="header__link help" onclick="loadDoc()">
+                                   <p>
+                                        Help
+                                   </p>
+                              </li>
+                         </ul>
+                    </div>
+                    <div class="premium__suggestion">
+                         <div class="premium__suggestion--image">
+                              <img src="../Media-Asset/girlsitBehindLaptop.png" alt="">
+                         </div>
+                         <div class="premium__suggestion--description__container">
+                              <div class="premium__suggestion--title">
+                                   <h3>
+                                        Premium Subscription
+                                   </h3>
+                              </div>
+                              <div class="premium__suggestion--description">
+                                   <p>
+                                        Buy Premium and get access to new Courses
+                                   </p>
+                              </div>
+                              <div class="premium__suggestion--button">
+                                   <button>
+                                        <span>
+                                             More detailed
+                                        </span>
+                                   </button>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+               <div class="wrapper__help">
+                    <div class="help__container">
+                         <div class="help__title">
+                              <h3>
+                                   Settings And Privacy
+                              </h3>
+                         </div>
+                         <div class="setting__container">
+                              <div class="setting">
+                                   <p>
+                                        Font And Display
+                                   </p>
+                                   <p>
+                                        Change E-mail
+                                   </p>
+                                   <p>
+                                        Change Number Phone
+                                   </p>
+                                   <p>
+                                        Change Password
+                                   </p>
+                                   <p>
+                                        Change Avatar
+                                   </p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+     <script src="../script.js"></script>
+</body>
+</html>
