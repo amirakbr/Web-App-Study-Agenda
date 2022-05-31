@@ -247,7 +247,7 @@ function loadDashboard() {
      xhttp.onload = function () {
           document.querySelector("body").innerHTML = this.responseText;
      };
-     xhttp.open("GET", "index.html");
+     xhttp.open("GET", "./index.html");
      xhttp.send();
 }
 function loadcourses() {
