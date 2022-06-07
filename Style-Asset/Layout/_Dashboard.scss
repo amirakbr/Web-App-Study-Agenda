@@ -66,6 +66,14 @@
                     .course {
                          padding: 2rem 1rem;
                          border-radius: 1rem;
+                         box-shadow: 0rem 0rem .9rem -0.5rem $light--gray--clr;
+                         transform: translateY(0);
+                         transition: all .3s ease-in-out;
+                         &:hover {
+                              box-shadow: 0rem .5rem .9rem 0rem $light--gray--clr;
+                              transform: translateY(-.5rem) ;
+                              border-radius: 2rem;
+                         }
                          .course__image {
                               background-color:aquamarine;
                               transform: scale(1);
@@ -194,6 +202,22 @@
                          font-size: $small--font;
                          color: $purple-clr;
                          font-weight: 600;
+                         cursor: pointer;
+                         &::after {
+                              content: "";
+                              position: absolute;
+                              left: 0;
+                              width: 100%;
+                              border-top: solid .3rem $purple-clr;
+                              transform: scaleX(0);
+                              transform-origin: right;
+                              transition: transform 0.3s ease-in-out;
+                              top: 100%;
+                         }
+                         &:hover:after {
+                              transform: scaleX(1);
+                              transform-origin: left;
+                         }
                     }
                }
                .my__course__main {
