@@ -287,12 +287,12 @@
                                                   content: "js" ;
                                                   display: table ; 
                                                   clear: both ; 
-                                                  font-size: 3rem ; 
-                                                  color: $orange--clr ;
-
+                                                  font-size: 4rem ; 
+                                                  color: $orange-clr;
+                                                  text-shadow: 0rem .3rem .1rem $light--gray--clr;
                                              }
                                              &:hover:before {
-                                                  animation: scale__animation .5s ease-in-out infinite; 
+                                                  animation: scale__animation .8s linear infinite; 
                                              }
                                         }
                                         .my__courses__name__wrapper {
@@ -431,18 +431,22 @@
 @keyframes scale__animation {
      0%{
           scale: 1;
+          text-shadow: 0rem .2rem .1rem $light--gray--clr;
      }
      25% {
           scale: 1.1;
+          text-shadow: 0rem .3rem .1rem $light--gray--clr;
      }
      50%{
           scale: 1.2;
+          text-shadow: 0rem .4rem .1rem $light--gray--clr;
      }
      75%{
           scale: 1.1;
+          text-shadow: 0rem .3rem .1rem $light--gray--clr;
      }
      100%{
           scale: 1;
-
+          text-shadow: 0rem .2rem .1rem $light--gray--clr;
      }
 }

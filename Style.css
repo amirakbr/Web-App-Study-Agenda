@@ -877,13 +877,14 @@ body .main #main {
   content: "js";
   display: table;
   clear: both;
-  font-size: 3rem;
-  color: #eead71;
+  font-size: 4rem;
+  color: #fbac5f;
+  text-shadow: 0rem 0.3rem 0.1rem #6c6c6c;
 }
 
 .dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__name__container .javascript--logo:hover:before {
-  -webkit-animation: scale__animation .5s ease-in-out infinite;
-          animation: scale__animation .5s ease-in-out infinite;
+  -webkit-animation: scale__animation .8s linear infinite;
+          animation: scale__animation .8s linear infinite;
 }
 
 .dashboard .dashboard__container .my__course__list .my__course__main .my__course__table .my__courses__tbody tr .my__courses__name__container .my__courses__name__wrapper {
@@ -1077,36 +1078,46 @@ body .main #main {
 @-webkit-keyframes scale__animation {
   0% {
     scale: 1;
+    text-shadow: 0rem 0.2rem 0.1rem #6c6c6c;
   }
   25% {
     scale: 1.1;
+    text-shadow: 0rem 0.3rem 0.1rem #6c6c6c;
   }
   50% {
     scale: 1.2;
+    text-shadow: 0rem 0.4rem 0.1rem #6c6c6c;
   }
   75% {
     scale: 1.1;
+    text-shadow: 0rem 0.3rem 0.1rem #6c6c6c;
   }
   100% {
     scale: 1;
+    text-shadow: 0rem 0.2rem 0.1rem #6c6c6c;
   }
 }
 
 @keyframes scale__animation {
   0% {
     scale: 1;
+    text-shadow: 0rem 0.2rem 0.1rem #6c6c6c;
   }
   25% {
     scale: 1.1;
+    text-shadow: 0rem 0.3rem 0.1rem #6c6c6c;
   }
   50% {
     scale: 1.2;
+    text-shadow: 0rem 0.4rem 0.1rem #6c6c6c;
   }
   75% {
     scale: 1.1;
+    text-shadow: 0rem 0.3rem 0.1rem #6c6c6c;
   }
   100% {
     scale: 1;
+    text-shadow: 0rem 0.2rem 0.1rem #6c6c6c;
   }
 }
 
