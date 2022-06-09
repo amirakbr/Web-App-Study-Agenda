@@ -73,7 +73,7 @@
 }
 
 .chat__container .contact__container .contact .contact__chat .contact__detail .contact__name {
-  font-size: 1.75rem;
+  font-size: 1.8rem;
 }
 
 .chat__container .contact__container .contact .contact__chat .contact__detail .contact__last--message {
@@ -94,7 +94,7 @@
 }
 
 .chat__container .contact__container .contact .contact__chat .contact__detail .contact__last--message span {
-  font-size: 1.75rem;
+  font-size: 1.8rem;
   color: #d7d3e4;
   margin-right: 1rem;
 }
@@ -184,7 +184,7 @@
 }
 
 .chat__container .chat__window .chat--window__header .chat__user--detail .chat__user--lastseen {
-  font-size: 1.75rem;
+  font-size: 1.8rem;
   color: #6c6c6c;
 }
 

@@ -298,3 +298,34 @@ function loadDoc() {
      xhttp.open("GET", "Pages/Help.html");
      xhttp.send();
 }
+// ==========================================
+// media Queries
+let mediaQueriesArray = [
+     window.matchMedia("(max-width:1220px)") , 
+     window.matchMedia("(min-width:1220px)") , 
+     window.matchMedia("(max-width:980px)") ,
+]
+window.addEventListener("DOMContentLoaded" , (e) => {
+     for (let i = 0; i < mediaQueriesArray.length ; i++) {
+          mediaQueriesArray[i].addListener(mediaQueryAction) ; 
+     }
+     mediaQueryAction() ; 
+})
+function mediaQueryAction() {
+     if(mediaQueriesArray[0].matches){
+          document.querySelector(".profile").style.display = "none" ; 
+          document.querySelector("#main").style = ` grid-template-columns: 25rem 2fr 0rem  !important; ` ; 
+          document.querySelector(".dashboard__user--setting").style.display= "block"
+          document.querySelector(".left--side__tab__container").style.display = "auto" ; 
+     }
+     if(mediaQueriesArray[1].matches){
+          document.querySelector(".profile").style.display = "block" ; 
+          document.querySelector("#main").style = ` grid-template-columns: 25rem 2fr minmax(25rem , .3fr)  !important; ` ; 
+          document.querySelector(".dashboard__user--setting").style.display= "none"
+          document.querySelector(".left--side__tab__container").style.display = "auto" ; 
+     }
+     if(mediaQueriesArray[2].matches) {
+          document.querySelector("#main").style = ` grid-template-columns: 1fr !important; ` ; 
+          document.querySelector(".left--side__tab__container").style.display = "none" ; 
+     }
+}

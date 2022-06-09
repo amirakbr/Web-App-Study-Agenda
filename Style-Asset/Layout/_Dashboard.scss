@@ -37,13 +37,15 @@
                               font-weight: 600;
                          }
                     }
-                    .dashboard__notification--alert {
+                    .dashboard__notification--alert , .dashboard__user--setting{
+                         width: 3rem;
                          padding: 1.5rem;
                          border-radius: 1rem;
                          background-color: $light--clr;
                          color: $dark--gray--clr;
                          box-shadow: 0rem 0rem .9rem -0.5rem $light--gray--clr;
                          transition: all .2s ease-in-out;
+                         @include display-column-center-center ;
                          &:hover {
                               box-shadow: 0rem 0rem .9rem 0rem $light--gray--clr;
                          }
@@ -51,6 +53,9 @@
                               @include fontasome("\f0f3") ; 
                               font-size: $normall--sub-font;
                          }
+                    }
+                    .dashboard__user--setting::before {
+                         @include fontasome("\f4ff") ; 
                     }
                }
           }

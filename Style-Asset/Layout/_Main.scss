@@ -9,14 +9,13 @@ body {
           border-radius: 2rem;
           .main__container {
                display: grid;
-               grid-template-columns: minmax(25rem , .5fr) 2fr 1fr ;
                align-items: flex-start;
                gap: 3rem;
                position: relative;
-               padding: 2rem 3rem;
+               padding: 2rem ;
           }
           #main {
-               grid-template-columns: minmax(25rem , .4fr) 2fr minmax(25rem , .5fr)  !important;
+               grid-template-columns: 25rem 2fr minmax(25rem , .3fr)  !important;
           }
      }
 }
