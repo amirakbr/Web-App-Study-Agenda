@@ -22,13 +22,20 @@
 <body>
      <main class="main">
           <div id="main" class="main__container">
-               <div class="left--side__tab__container">
-                    <div class="title">
+               <div class="left--side__tab__container left--side__mobile">
+                    <div class="hamburger">
+                         <div class="hamburger__container">
+                              <span class="line1"></span>
+                              <span class="line2"></span>
+                              <span class="line3"></span>
+                         </div>
+                    </div>
+                    <div class="title title__hamburger">
                          <span>
                               Academy
                          </span>
                     </div>
-                    <div class="left__tab--link">
+                    <div class="left__tab--link link__hamburger">
                          <ul>
                               <li class="activate__header header__link dashboard" onclick="loadDashboard()" >
                                    <p>
@@ -67,7 +74,7 @@
                               </li>
                          </ul>
                     </div>
-                    <div class="premium__suggestion">
+                    <div class="premium__suggestion permium__hamburger">
                          <div class="premium__suggestion--image">
                               <img src="./Media-Asset/girlsitBehindLaptop.png" alt="">
                          </div>
@@ -92,7 +99,7 @@
                          </div>
                     </div>
                </div>
-               <div class="dashboard">
+               <div id="dashboard" class="dashboard">
                     <div class="dashboard__container">
                          <div class="dashboard__header">
                               <div class="dashboard__title">

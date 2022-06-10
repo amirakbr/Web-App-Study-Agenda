@@ -303,8 +303,10 @@ function loadDoc() {
 let mediaQueriesArray = [
      window.matchMedia("(max-width:1220px)") , 
      window.matchMedia("(min-width:1220px)") , 
-     window.matchMedia("(max-width:980px)") ,
+     window.matchMedia("(max-width:985px)") ,
+     window.matchMedia("(max-width:765px)") ,
 ]
+let dashboard = document.querySelector("#dashboard") ;
 window.addEventListener("DOMContentLoaded" , (e) => {
      for (let i = 0; i < mediaQueriesArray.length ; i++) {
           mediaQueriesArray[i].addListener(mediaQueryAction) ; 
@@ -314,18 +316,30 @@ window.addEventListener("DOMContentLoaded" , (e) => {
 function mediaQueryAction() {
      if(mediaQueriesArray[0].matches){
           document.querySelector(".profile").style.display = "none" ; 
-          document.querySelector("#main").style = ` grid-template-columns: 25rem 2fr 0rem  !important; ` ; 
           document.querySelector(".dashboard__user--setting").style.display= "block"
-          document.querySelector(".left--side__tab__container").style.display = "auto" ; 
+          document.querySelector(".hamburger").style.display = "none" ; 
+          document.querySelector(".left--side__tab__container").classList.remove("left--side__mobile") ; 
+          document.querySelector("#main").style = ` grid-template-columns: 25rem 2fr 0 !important; ` ; 
      }
      if(mediaQueriesArray[1].matches){
           document.querySelector(".profile").style.display = "block" ; 
-          document.querySelector("#main").style = ` grid-template-columns: 25rem 2fr minmax(25rem , .3fr)  !important; ` ; 
+          document.querySelector("#main").style = ` grid-template-columns: 25rem 2fr minmax(27rem , .3fr)  !important; ` ; 
           document.querySelector(".dashboard__user--setting").style.display= "none"
-          document.querySelector(".left--side__tab__container").style.display = "auto" ; 
+          document.querySelector(".hamburger").style.display = "none "; 
+          document.querySelector(".left--side__tab__container").classList.remove("left--side__mobile") ; 
      }
      if(mediaQueriesArray[2].matches) {
-          document.querySelector("#main").style = ` grid-template-columns: 1fr !important; ` ; 
-          document.querySelector(".left--side__tab__container").style.display = "none" ; 
+          document.querySelector("#main").style = ` grid-template-columns: 8rem 1fr !important; ` ; 
+          document.querySelector(".hamburger").style.display = "block" ; 
+          document.querySelector(".left--side__tab__container").classList.add("left--side__mobile") ; 
+     }
+     if(mediaQueriesArray[3].matches) {
+          dashboard.classList.add("dashboard__mobile")
      }
 }
+let hamburger = document.querySelector(".hamburger") ; 
+let hamburgerContainer = document.querySelector(".hamburger__container") ; 
+hamburger.addEventListener("click" , (e) => {
+     document.querySelector(".left--side__tab__container").classList.toggle("left--side__mobile--active") ; 
+     hamburgerContainer.classList.toggle("active__hamburger") ; 
+})

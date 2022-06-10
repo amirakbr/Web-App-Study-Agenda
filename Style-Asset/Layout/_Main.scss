@@ -2,20 +2,24 @@
 @import "../Ultility/variable" ;
 body {
      background-color: $veryLightPink--clr;
-     padding: 4rem 1rem;
+     padding: 0rem 1rem;
      .main {
           background-color: #fbfbfb;
           position: relative;
           border-radius: 2rem;
+          padding: 0 1rem 0 0;
+          height: 90vh;
+          margin: 5vh 0;
+          overflow-y: auto;
           .main__container {
                display: grid;
                align-items: flex-start;
                gap: 3rem;
                position: relative;
-               padding: 2rem ;
+               padding-right: 1rem;
           }
           #main {
-               grid-template-columns: 25rem 2fr minmax(25rem , .3fr)  !important;
+               grid-template-columns: 25rem 2fr minmax(27rem , .3fr)  !important;
           }
      }
 }

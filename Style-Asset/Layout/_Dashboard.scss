@@ -455,3 +455,34 @@
           text-shadow: 0rem .2rem .1rem $light--gray--clr;
      }
 }
+.dashboard__mobile {
+     .dashboard__header {
+          flex-wrap: wrap;
+          justify-content: center !important;
+          height: auto !important;
+     }
+     .dashboard__course--interface {
+          margin-top: 2rem;
+          flex-wrap: wrap;
+          justify-content: center !important;
+     }
+     .course--new--released {
+          grid-template-columns: repeat(auto-fit ,  minmax(29rem , 1fr)) !important;
+     }
+     .new--course {
+          margin-top: 2rem;
+     }
+     .my__course__main {
+          width : max-content !important; 
+          td , tr , tbody , thead , table {
+               display: block !important;
+               width: max-content;
+          }
+          table {
+               padding-bottom: 3rem !important;
+               thead {
+                    display: none !important;
+               }
+          }
+     }
+}
